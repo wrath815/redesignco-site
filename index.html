@@ -5,164 +5,224 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>RedesignCo — Websites that earn their keep</title>
 <meta name="description" content="RedesignCo rebuilds dated small-business websites into fast, clear, mobile-first pages that turn visitors into calls, bookings, and sales. Fixed-scope redesigns, no jargon." />
-<meta name="theme-color" content="#16130f" />
+<meta name="theme-color" content="#08080a" />
 <meta property="og:title" content="RedesignCo — Websites that earn their keep" />
 <meta property="og:description" content="Fixed-scope redesigns that make dated small-business sites fast, clear, and mobile-first." />
 <meta property="og:type" content="website" />
+<!-- build-marker: mythic-gold-red-v3 -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316130f'/%3E%3Cpath d='M9 22V10h6.2c2.7 0 4.4 1.5 4.4 3.9 0 1.8-1 3.1-2.6 3.6L20.8 22h-3l-2.4-4.2H12V22H9zm3-6.6h2.8c1.2 0 1.9-.6 1.9-1.6s-.7-1.6-1.9-1.6H12v3.2z' fill='%23e2542a'/%3E%3C/svg%3E" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2308080a'/%3E%3Cpath d='M9 22V10h6.2c2.7 0 4.4 1.5 4.4 3.9 0 1.8-1 3.1-2.6 3.6L20.8 22h-3l-2.4-4.2H12V22H9zm3-6.6h2.8c1.2 0 1.9-.6 1.9-1.6s-.7-1.6-1.9-1.6H12v3.2z' fill='%23e6b84e'/%3E%3C/svg%3E" />
 <style>
   :root{
-    --paper:#f7f4ee; --paper-2:#efe9df; --ink:#16130f; --ink-soft:#4a443c;
-    --line:#ddd4c6; --accent:#e2542a; --accent-ink:#b23c17; --sage:#3f6b52;
-    --shadow:0 22px 50px -28px rgba(22,19,15,.45);
-    --serif:'Fraunces',Georgia,'Times New Roman',serif;
+    --void:#08080a; --void-2:#141417; --panel:#161619; --panel-2:#1d1d21;
+    --text:#f6f5f2; --text-soft:#b4b2ad; --text-dim:#7d7b76;
+    --line:rgba(230,184,78,.16); --line-2:rgba(226,59,46,.26); --line-grey:rgba(255,255,255,.08);
+    --gold:#e6b84e; --gold-bright:#f4d47f; --gold-deep:#c9902b; --red:#e23b2e; --red-soft:#ff5a49;
+    --grad-gold:linear-gradient(120deg,#f4d47f 0%,#e6b84e 52%,#c9902b 100%);
+    --shadow:0 30px 70px -34px rgba(0,0,0,.9);
+    --glow-gold:0 0 34px -6px rgba(230,184,78,.5);
+    --serif:'Syne',system-ui,sans-serif;
     --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
-    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacing:-.02em;margin:0}
+  body{margin:0;color:var(--text);font-family:var(--sans);
+    font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
+    background:
+      radial-gradient(1100px 720px at 78% -8%,rgba(230,184,78,.16),transparent 60%),
+      radial-gradient(760px 560px at 12% 6%,rgba(226,59,46,.08),transparent 58%),
+      radial-gradient(1200px 900px at 50% 122%,rgba(230,184,78,.07),transparent 60%),
+      linear-gradient(180deg,var(--void) 0%,var(--void-2) 55%,#0b0b0d 100%);
+    background-attachment:fixed;
+  }
+  /* fine grain + scanline atmosphere */
+  body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.5;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+    mix-blend-mode:overlay}
+  body::after{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
+    background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.35) 3px 4px)}
+  h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.05;letter-spacing:-.02em;margin:0}
   a{color:inherit}
   img,svg{display:block;max-width:100%}
-  .wrap{width:min(1140px,92vw);margin-inline:auto}
-  .eyebrow{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.18em;
-    text-transform:uppercase;color:var(--accent-ink)}
+  .wrap{width:min(1140px,92vw);margin-inline:auto;position:relative;z-index:2}
+  .eyebrow{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--gold)}
 
   /* NAV */
-  header.nav{position:sticky;top:0;z-index:50;background:rgba(247,244,238,.82);
-    backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,12,.62);
+    backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line-grey);
+    transition:box-shadow .3s ease,background .3s ease}
+  header.nav.scrolled{box-shadow:0 14px 40px -30px rgba(230,184,78,.6);background:rgba(10,10,12,.82)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
   .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);
-    font-weight:600;font-size:1.22rem;letter-spacing:-.02em;text-decoration:none}
-  .mark{width:34px;height:34px;border-radius:9px;background:var(--ink);display:grid;place-items:center;flex:none}
+    font-weight:700;font-size:1.22rem;letter-spacing:-.02em;text-decoration:none}
+  .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#1a1a1d,#0e0e10);
+    border:1px solid var(--line);box-shadow:var(--glow-gold);display:grid;place-items:center;flex:none}
   .nav-links{display:flex;gap:30px;align-items:center;font-size:.95rem;font-weight:500}
-  .nav-links a{text-decoration:none;color:var(--ink-soft);transition:color .2s}
-  .nav-links a:hover{color:var(--ink)}
+  .nav-links a{text-decoration:none;color:var(--text-soft);transition:color .2s}
+  .nav-links a:hover{color:var(--text)}
+  .nav-links a:not(.btn){position:relative}
+  .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:2px;
+    background:var(--grad-gold);transition:right .28s ease;border-radius:2px}
+  .nav-links a:not(.btn):hover::after{right:0}
   .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.95rem;
-    text-decoration:none;padding:12px 20px;border-radius:100px;transition:transform .18s,box-shadow .18s,background .18s}
-  .btn-solid{background:var(--accent);color:#fff;box-shadow:0 10px 24px -12px var(--accent)}
-  .btn-solid:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px var(--accent)}
-  .btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
-  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+    text-decoration:none;padding:12px 20px;border-radius:100px;transition:transform .18s,box-shadow .18s,filter .18s}
+  .btn-solid{background:var(--grad-gold);color:#14100a;box-shadow:0 12px 34px -12px rgba(230,184,78,.7)}
+  .btn-solid:hover{transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 18px 42px -12px rgba(230,184,78,.85)}
+  .btn-ghost{border:1.5px solid rgba(230,184,78,.5);color:var(--text)}
+  .btn-ghost:hover{background:rgba(226,59,46,.1);border-color:var(--red);color:#fff;box-shadow:0 0 26px -8px rgba(226,59,46,.6)}
   .nav .btn{padding:10px 18px}
 
   /* HERO */
-  .hero{padding:74px 0 40px;position:relative;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-  .hero h1{font-size:clamp(2.7rem,5.6vw,4.5rem)}
-  .hero h1 em{font-style:italic;color:var(--accent);font-weight:500}
-  .hero .lead{font-size:1.18rem;color:var(--ink-soft);margin:26px 0 32px;max-width:34ch}
+  .hero{padding:74px 0 46px;position:relative;overflow:hidden}
+  .hero-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease;
+    background:
+      radial-gradient(56% 58% at 72% 40%,rgba(230,184,78,.28),transparent 70%),
+      radial-gradient(40% 46% at 64% 52%,rgba(226,59,46,.14),transparent 72%);
+    -webkit-mask-image:radial-gradient(130% 120% at 70% 40%,#000 34%,transparent 84%);
+    mask-image:radial-gradient(130% 120% at 70% 40%,#000 34%,transparent 84%)}
+  .hero-canvas.ready{opacity:1}
+  .hero-canvas canvas{display:block;width:100%;height:100%}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.7rem,5.6vw,4.6rem);font-weight:800}
+  .hero h1 em{font-style:italic;font-weight:700;background:var(--grad-gold);-webkit-background-clip:text;
+    background-clip:text;-webkit-text-fill-color:transparent}
+  .hero .lead{font-size:1.18rem;color:var(--text-soft);margin:26px 0 32px;max-width:34ch}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .hero-note{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap;font-size:.86rem;color:var(--ink-soft)}
+  .hero-note{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap;font-size:.86rem;color:var(--text-soft)}
   .hero-note span{display:flex;align-items:center;gap:8px}
-  .hero-note svg{color:var(--sage)}
+  .hero-note svg{color:var(--gold)}
 
   /* BEFORE/AFTER SLIDER */
-  .compare{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);
-    border:1px solid var(--line);aspect-ratio:4/3.05;background:#fff;user-select:none;touch-action:none}
+  .compare{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow),0 0 0 1px var(--line),0 0 46px -10px rgba(230,184,78,.4);
+    aspect-ratio:4/3.05;background:#0b0b0d;user-select:none;touch-action:none}
   .compare .pane{position:absolute;inset:0}
   .compare .after{clip-path:inset(0 0 0 var(--pos,50%))}
   .compare svg{width:100%;height:100%}
-  .divider{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;
-    box-shadow:0 0 0 1px rgba(22,19,15,.15);transform:translateX(-1px);z-index:3;cursor:ew-resize}
+  .divider{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--gold);
+    box-shadow:0 0 14px 1px rgba(230,184,78,.85);transform:translateX(-1px);z-index:3;cursor:ew-resize}
   .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;
-    border-radius:50%;background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;color:var(--ink)}
+    border-radius:50%;background:#0b0b0d;border:1.5px solid var(--gold);box-shadow:0 0 20px -2px rgba(230,184,78,.9);
+    display:grid;place-items:center;color:var(--gold)}
   .tag{position:absolute;top:14px;z-index:4;font-size:.68rem;font-weight:600;letter-spacing:.1em;
-    text-transform:uppercase;padding:6px 11px;border-radius:100px;color:#fff;backdrop-filter:blur(4px)}
-  .tag.b{left:14px;background:rgba(22,19,15,.72)}
-  .tag.a{right:14px;background:var(--accent)}
-  .compare-cap{margin-top:12px;font-size:.82rem;color:var(--ink-soft);text-align:center}
+    text-transform:uppercase;padding:6px 11px;border-radius:100px;color:#14100a;backdrop-filter:blur(4px)}
+  .tag.b{left:14px;background:rgba(246,245,242,.86);color:#141417}
+  .tag.a{right:14px;background:var(--grad-gold)}
+  .compare-cap{margin-top:12px;font-size:.82rem;color:var(--text-dim);text-align:center}
 
   /* MARQUEE STRIP */
-  .strip{border-block:1px solid var(--line);background:var(--paper-2)}
+  .strip{border-block:1px solid var(--line-grey);background:rgba(22,22,25,.5)}
   .strip-in{display:flex;flex-wrap:wrap;gap:14px 40px;padding:20px 0;align-items:center;
-    justify-content:space-between;font-family:var(--serif);font-size:1.02rem;color:var(--ink-soft)}
-  .strip-in b{color:var(--ink);font-weight:600}
+    justify-content:space-between;font-family:var(--serif);font-size:1.02rem;color:var(--text-soft);font-weight:500}
+  .strip-in b{color:var(--text);font-weight:700}
 
   /* SECTION HEAD */
-  .sec{padding:88px 0}
+  .sec{padding:92px 0}
   .sec-head{max-width:56ch;margin-bottom:44px}
-  .sec-head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin:14px 0 0}
+  .sec-head h2{font-size:clamp(2rem,3.6vw,2.95rem);margin:14px 0 0}
 
   /* SERVICES */
   .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px 28px;
-    transition:transform .2s,box-shadow .2s,border-color .2s;position:relative}
-  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cfc4b2}
-  .ico{width:50px;height:50px;border-radius:13px;background:var(--paper-2);display:grid;
-    place-items:center;color:var(--accent-ink);margin-bottom:20px}
+  .card{background:linear-gradient(160deg,rgba(29,29,33,.75),rgba(16,16,18,.75));
+    border:1px solid var(--line-grey);border-radius:16px;padding:30px 28px;
+    transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;inset:0;border-radius:16px;padding:1px;
+    background:var(--grad-gold);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .25s}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow),0 0 40px -14px rgba(230,184,78,.5);border-color:transparent}
+  .card:hover::before{opacity:.9}
+  .ico{width:50px;height:50px;border-radius:13px;background:rgba(230,184,78,.09);
+    border:1px solid var(--line);display:grid;place-items:center;color:var(--gold);margin-bottom:20px}
   .card h3{font-size:1.34rem}
-  .card p{color:var(--ink-soft);margin:12px 0 16px;font-size:.98rem}
-  .card ul{margin:0;padding:0;list-style:none;font-size:.9rem;color:var(--ink-soft)}
+  .card p{color:var(--text-soft);margin:12px 0 16px;font-size:.98rem}
+  .card ul{margin:0;padding:0;list-style:none;font-size:.9rem;color:var(--text-soft)}
   .card li{display:flex;gap:9px;padding:5px 0}
-  .card li svg{color:var(--sage);flex:none;margin-top:3px}
+  .card li svg{color:var(--gold);flex:none;margin-top:3px}
 
   /* APPROACH */
-  .approach{background:var(--ink);color:var(--paper);border-radius:26px;padding:64px clamp(28px,5vw,64px)}
-  .approach .eyebrow{color:#f0a488}
-  .approach h2{color:var(--paper);font-size:clamp(2rem,3.6vw,2.9rem);max-width:20ch}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
-  .step{border-top:2px solid rgba(247,244,238,.24);padding-top:20px}
-  .step .n{font-family:var(--serif);font-size:2.2rem;color:var(--accent);line-height:1}
-  .step h3{color:var(--paper);font-size:1.16rem;margin:14px 0 8px}
-  .step p{color:#c9c2b6;font-size:.92rem;margin:0}
+  .approach{background:linear-gradient(150deg,rgba(29,29,33,.92),rgba(10,10,12,.94));color:var(--text);
+    border:1px solid var(--line);border-radius:26px;padding:64px clamp(28px,5vw,64px);position:relative;overflow:hidden;
+    box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.05)}
+  .approach::after{content:"";position:absolute;top:-40%;right:-10%;width:60%;height:160%;
+    background:radial-gradient(closest-side,rgba(226,59,46,.14),transparent);pointer-events:none}
+  .approach .eyebrow{color:var(--red-soft)}
+  .approach h2{font-size:clamp(2rem,3.6vw,2.9rem);max-width:20ch}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px;position:relative;z-index:2}
+  .step{border-top:2px solid rgba(230,184,78,.34);padding-top:20px}
+  .step .n{font-family:var(--serif);font-size:2.2rem;font-weight:800;line-height:1;
+    background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .step h3{font-size:1.16rem;margin:14px 0 8px}
+  .step p{color:var(--text-soft);font-size:.92rem;margin:0}
 
   /* WORK / CONCEPT */
   .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .work{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;
-    transition:transform .2s,box-shadow .2s}
-  .work:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-  .work .thumb{aspect-ratio:16/11;border-bottom:1px solid var(--line)}
-  .work .thumb svg{width:100%;height:100%}
+  .work{border:1px solid var(--line-grey);border-radius:16px;overflow:hidden;
+    background:linear-gradient(160deg,rgba(29,29,33,.72),rgba(16,16,18,.72));
+    transition:transform .2s,box-shadow .2s,border-color .2s}
+  .work:hover{transform:translateY(-4px);box-shadow:var(--shadow),0 0 40px -16px rgba(230,184,78,.5);border-color:var(--line)}
+  .work .thumb{aspect-ratio:16/11;border-bottom:1px solid var(--line-grey);overflow:hidden}
+  .work .thumb svg{width:100%;height:100%;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .work:hover .thumb svg{transform:scale(1.035)}
   .work .meta{padding:20px 22px}
-  .work .meta .k{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+  .work .meta .k{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
   .work .meta h3{font-size:1.2rem;margin:8px 0 8px}
-  .work .meta p{font-size:.9rem;color:var(--ink-soft);margin:0}
-  .concept-note{margin-top:26px;font-size:.85rem;color:var(--ink-soft);display:flex;gap:9px;align-items:flex-start}
-  .concept-note svg{flex:none;margin-top:3px;color:var(--sage)}
+  .work .meta p{font-size:.9rem;color:var(--text-soft);margin:0}
+  .concept-note{margin-top:26px;font-size:.85rem;color:var(--text-soft);display:flex;gap:9px;align-items:flex-start}
+  .concept-note svg{flex:none;margin-top:3px;color:var(--gold)}
 
-  /* PRICING-ish / OFFER */
+  /* OFFER */
   .offer{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
-  .offer .panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:34px 32px}
-  .offer .panel.lead{background:var(--paper-2)}
+  .offer .panel{background:linear-gradient(160deg,rgba(29,29,33,.75),rgba(16,16,18,.75));
+    border:1px solid var(--line-grey);border-radius:18px;padding:34px 32px}
+  .offer .panel.lead{border-color:var(--line);box-shadow:0 0 44px -18px rgba(230,184,78,.55);
+    background:linear-gradient(160deg,rgba(38,32,20,.7),rgba(18,16,12,.82))}
   .offer h3{font-size:1.5rem}
-  .offer .price{font-family:var(--serif);font-size:1.05rem;color:var(--sage);font-weight:600;margin-top:6px}
+  .offer .price{font-family:var(--serif);font-size:1.05rem;color:var(--gold);font-weight:600;margin-top:6px}
   .offer ul{list-style:none;padding:0;margin:20px 0 0}
-  .offer li{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:.95rem;color:var(--ink-soft)}
+  .offer li{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line-grey);font-size:.95rem;color:var(--text-soft)}
   .offer li:first-child{border-top:0}
-  .offer li svg{color:var(--accent);flex:none;margin-top:3px}
+  .offer li svg{color:var(--gold);flex:none;margin-top:3px}
 
   /* CONTACT */
-  .contact{background:linear-gradient(180deg,var(--paper) 0%,var(--paper-2) 100%);
-    border:1px solid var(--line);border-radius:26px;padding:64px clamp(28px,5vw,72px);text-align:center}
-  .contact h2{font-size:clamp(2.1rem,4vw,3.2rem);max-width:18ch;margin-inline:auto}
-  .contact p{color:var(--ink-soft);max-width:46ch;margin:20px auto 30px;font-size:1.1rem}
-  .contact-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .contact .fine{margin-top:22px;font-size:.84rem;color:var(--ink-soft)}
+  .contact{background:linear-gradient(160deg,rgba(29,29,33,.88),rgba(10,10,12,.92));
+    border:1px solid var(--line);border-radius:26px;padding:64px clamp(28px,5vw,72px);text-align:center;
+    position:relative;overflow:hidden;box-shadow:var(--shadow)}
+  .contact::after{content:"";position:absolute;bottom:-50%;left:50%;transform:translateX(-50%);width:80%;height:150%;
+    background:radial-gradient(closest-side,rgba(230,184,78,.14),transparent);pointer-events:none}
+  .contact h2{font-size:clamp(2.1rem,4vw,3.2rem);max-width:18ch;margin-inline:auto;position:relative;z-index:2}
+  .contact p{color:var(--text-soft);max-width:46ch;margin:20px auto 30px;font-size:1.1rem;position:relative;z-index:2}
+  .contact-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+  .contact .fine{margin-top:22px;font-size:.84rem;color:var(--text-dim);position:relative;z-index:2}
+  .contact .fine a{color:var(--gold);text-decoration:underline}
 
-  footer{padding:52px 0 40px;border-top:1px solid var(--line);margin-top:88px}
+  footer{padding:52px 0 40px;border-top:1px solid var(--line-grey);margin-top:92px}
   .foot-in{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center;
-    font-size:.9rem;color:var(--ink-soft)}
+    font-size:.9rem;color:var(--text-dim)}
   .foot-links{display:flex;gap:24px;flex-wrap:wrap}
-  .foot-links a{text-decoration:none}
-  .foot-links a:hover{color:var(--ink)}
+  .foot-links a{text-decoration:none;color:var(--text-soft)}
+  .foot-links a:hover{color:var(--text)}
 
   .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
+  .svc .card:nth-child(2),.work-grid .work:nth-child(2),.steps .step:nth-child(2){transition-delay:.08s}
+  .svc .card:nth-child(3),.work-grid .work:nth-child(3),.steps .step:nth-child(3){transition-delay:.16s}
+  .svc .card:nth-child(4),.steps .step:nth-child(4){transition-delay:.24s}
 
   @media(max-width:900px){
     .hero-grid,.offer{grid-template-columns:1fr;gap:40px}
     .svc,.work-grid,.steps{grid-template-columns:1fr}
     .steps{gap:26px}
     .nav-links a:not(.btn){display:none}
-    .hero{padding:48px 0 20px}
+    .hero{padding:48px 0 24px}
     .sec{padding:64px 0}
   }
-  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .hero-canvas{opacity:1}
+  }
 </style>
 </head>
 <body>
@@ -171,7 +231,7 @@
   <div class="wrap nav-in">
     <a class="brand" href="#top">
       <span class="mark">
-        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M9 22V10h6.2c2.7 0 4.4 1.5 4.4 3.9 0 1.8-1 3.1-2.6 3.6L20.8 22h-3l-2.4-4.2H12V22H9zm3-6.6h2.8c1.2 0 1.9-.6 1.9-1.6s-.7-1.6-1.9-1.6H12v3.2z" fill="#e2542a"/></svg>
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M9 22V10h6.2c2.7 0 4.4 1.5 4.4 3.9 0 1.8-1 3.1-2.6 3.6L20.8 22h-3l-2.4-4.2H12V22H9zm3-6.6h2.8c1.2 0 1.9-.6 1.9-1.6s-.7-1.6-1.9-1.6H12v3.2z" fill="#e6b84e"/></svg>
       </span>
       RedesignCo
     </a>
@@ -191,6 +251,7 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-canvas" id="heroCanvas" aria-hidden="true"></div>
     <div class="wrap hero-grid">
       <div>
         <span class="eyebrow">Web redesign, done in weeks — not quarters</span>
@@ -234,33 +295,33 @@
             </svg>
           </div>
           <div class="pane after" id="afterPane">
-            <!-- AFTER: redesigned site -->
+            <!-- AFTER: redesigned site (RedesignCo house style: black void, gold + red) -->
             <svg viewBox="0 0 400 305" xmlns="http://www.w3.org/2000/svg">
-              <rect width="400" height="305" fill="#faf8f4"/>
-              <rect width="400" height="40" fill="#ffffff"/><line x1="0" y1="40" x2="400" y2="40" stroke="#e7e0d4"/>
-              <circle cx="22" cy="20" r="8" fill="#16130f"/><text x="18" y="24" font-family="Georgia" font-size="11" fill="#e2542a" font-weight="bold">A</text>
-              <text x="38" y="24" font-family="Georgia" font-size="13" fill="#16130f" font-weight="bold">Al's Plumbing</text>
-              <rect x="300" y="12" width="86" height="18" rx="9" fill="#e2542a"/>
-              <text x="343" y="24" text-anchor="middle" font-family="Arial" font-size="9" fill="#fff" font-weight="bold">Book online</text>
-              <text x="24" y="96" font-family="Georgia" font-size="25" fill="#16130f" font-weight="bold">Heat back on,</text>
-              <text x="24" y="124" font-family="Georgia" font-size="25" fill="#e2542a" font-weight="bold" font-style="italic">same day.</text>
-              <text x="24" y="150" font-family="Arial" font-size="10.5" fill="#5a544b">Licensed plumbing &amp; heating for homes</text>
-              <text x="24" y="165" font-family="Arial" font-size="10.5" fill="#5a544b">across the county since 1994.</text>
-              <rect x="24" y="180" width="118" height="30" rx="15" fill="#16130f"/>
-              <text x="83" y="199" text-anchor="middle" font-family="Arial" font-size="10" fill="#fff" font-weight="bold">Call (555) 010-4477</text>
-              <rect x="150" y="180" width="92" height="30" rx="15" fill="none" stroke="#16130f"/>
-              <text x="196" y="199" text-anchor="middle" font-family="Arial" font-size="10" fill="#16130f" font-weight="bold">Get a quote</text>
-              <rect x="262" y="64" width="114" height="150" rx="12" fill="#eef3ef"/>
-              <circle cx="319" cy="112" r="26" fill="#3f6b52"/>
-              <path d="M309 112l7 7 13-14" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="282" y="150" width="74" height="7" rx="3" fill="#cbd7ce"/><rect x="282" y="164" width="60" height="7" rx="3" fill="#d8e0da"/>
-              <rect x="282" y="185" width="74" height="7" rx="3" fill="#d8e0da"/>
-              <rect x="24" y="238" width="106" height="44" rx="10" fill="#fff" stroke="#e7e0d4"/>
-              <rect x="142" y="238" width="106" height="44" rx="10" fill="#fff" stroke="#e7e0d4"/>
-              <rect x="260" y="238" width="116" height="44" rx="10" fill="#fff" stroke="#e7e0d4"/>
-              <rect x="36" y="252" width="46" height="6" rx="3" fill="#e2542a"/><rect x="36" y="264" width="70" height="5" rx="2" fill="#d6cfc2"/>
-              <rect x="154" y="252" width="46" height="6" rx="3" fill="#e2542a"/><rect x="154" y="264" width="70" height="5" rx="2" fill="#d6cfc2"/>
-              <rect x="272" y="252" width="46" height="6" rx="3" fill="#e2542a"/><rect x="272" y="264" width="80" height="5" rx="2" fill="#d6cfc2"/>
+              <rect width="400" height="305" fill="#0b0b0d"/>
+              <rect width="400" height="40" fill="#141417"/><line x1="0" y1="40" x2="400" y2="40" stroke="#2a2a2f"/>
+              <circle cx="22" cy="20" r="8" fill="#1a1a1d"/><text x="18" y="24" font-family="Georgia" font-size="11" fill="#e6b84e" font-weight="bold">A</text>
+              <text x="38" y="24" font-family="Georgia" font-size="13" fill="#f6f5f2" font-weight="bold">Al's Plumbing</text>
+              <rect x="300" y="12" width="86" height="18" rx="9" fill="#e6b84e"/>
+              <text x="343" y="24" text-anchor="middle" font-family="Arial" font-size="9" fill="#14100a" font-weight="bold">Book online</text>
+              <text x="24" y="96" font-family="Georgia" font-size="25" fill="#f6f5f2" font-weight="bold">Heat back on,</text>
+              <text x="24" y="124" font-family="Georgia" font-size="25" fill="#e6b84e" font-weight="bold" font-style="italic">same day.</text>
+              <text x="24" y="150" font-family="Arial" font-size="10.5" fill="#b4b2ad">Licensed plumbing &amp; heating for homes</text>
+              <text x="24" y="165" font-family="Arial" font-size="10.5" fill="#b4b2ad">across the county since 1994.</text>
+              <rect x="24" y="180" width="118" height="30" rx="15" fill="#e6b84e"/>
+              <text x="83" y="199" text-anchor="middle" font-family="Arial" font-size="10" fill="#14100a" font-weight="bold">Call (555) 010-4477</text>
+              <rect x="150" y="180" width="92" height="30" rx="15" fill="none" stroke="#e23b2e"/>
+              <text x="196" y="199" text-anchor="middle" font-family="Arial" font-size="10" fill="#ff7a6d" font-weight="bold">Get a quote</text>
+              <rect x="262" y="64" width="114" height="150" rx="12" fill="#161619"/>
+              <circle cx="319" cy="112" r="26" fill="#e6b84e"/>
+              <path d="M309 112l7 7 13-14" stroke="#14100a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="282" y="150" width="74" height="7" rx="3" fill="#3a3a40"/><rect x="282" y="164" width="60" height="7" rx="3" fill="#2c2c31"/>
+              <rect x="282" y="185" width="74" height="7" rx="3" fill="#2c2c31"/>
+              <rect x="24" y="238" width="106" height="44" rx="10" fill="#161619" stroke="#2a2a2f"/>
+              <rect x="142" y="238" width="106" height="44" rx="10" fill="#161619" stroke="#2a2a2f"/>
+              <rect x="260" y="238" width="116" height="44" rx="10" fill="#161619" stroke="#2a2a2f"/>
+              <rect x="36" y="252" width="46" height="6" rx="3" fill="#e23b2e"/><rect x="36" y="264" width="70" height="5" rx="2" fill="#3a3a40"/>
+              <rect x="154" y="252" width="46" height="6" rx="3" fill="#e23b2e"/><rect x="154" y="264" width="70" height="5" rx="2" fill="#3a3a40"/>
+              <rect x="272" y="252" width="46" height="6" rx="3" fill="#e23b2e"/><rect x="272" y="264" width="80" height="5" rx="2" fill="#3a3a40"/>
             </svg>
           </div>
           <span class="tag b">Before</span>
@@ -380,7 +441,7 @@
       <div class="sec-head reveal">
         <span class="eyebrow">Concept work</span>
         <h2>The kind of transformations we build.</h2>
-        <p style="color:var(--ink-soft);margin-top:14px">RedesignCo is a new studio, so these are original concept pieces — sample rebuilds we designed to show our range and standard of work, not real client projects.</p>
+        <p style="color:var(--text-soft);margin-top:14px">RedesignCo is a new studio, so these are original concept pieces — sample rebuilds we designed to show our range and standard of work, not real client projects.</p>
       </div>
 
       <div class="work-grid">
@@ -508,12 +569,13 @@
         <h2>Let's tear down your current site — free.</h2>
         <p>Send the link to your existing website. You'll get a short, honest walkthrough of what's helping and what's hurting, plus a fixed quote if a redesign makes sense. No pressure, no retainer, no jargon.</p>
         <div class="contact-cta">
-          <a class="btn btn-solid" href="mailto:hello@redesignco.studio?subject=Free%20website%20teardown&amp;body=Here's%20my%20current%20site:%20">Request your free teardown
+          <a class="btn btn-solid" href="mailto:adeline@agentmail.to?subject=Free%20website%20teardown&amp;body=Here's%20my%20current%20site:%20">Request your free teardown
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn-ghost" href="mailto:hello@redesignco.studio">hello@redesignco.studio</a>
+          <a class="btn btn-ghost" href="mailto:adeline@agentmail.to">adeline@agentmail.to</a>
         </div>
         <p class="fine">Typical reply within one business day · Remote-friendly · Fixed scope, fixed price</p>
+        <p class="fine" style="margin-top:8px">Or reach Ray directly: <a href="mailto:raydavisombeki@gmail.com">raydavisombeki@gmail.com</a></p>
       </div>
     </div>
   </section>
@@ -524,7 +586,7 @@
   <div class="wrap foot-in">
     <a class="brand" href="#top" style="font-size:1.05rem">
       <span class="mark" style="width:28px;height:28px">
-        <svg width="17" height="17" viewBox="0 0 32 32" fill="none"><path d="M9 22V10h6.2c2.7 0 4.4 1.5 4.4 3.9 0 1.8-1 3.1-2.6 3.6L20.8 22h-3l-2.4-4.2H12V22H9zm3-6.6h2.8c1.2 0 1.9-.6 1.9-1.6s-.7-1.6-1.9-1.6H12v3.2z" fill="#e2542a"/></svg>
+        <svg width="17" height="17" viewBox="0 0 32 32" fill="none"><path d="M9 22V10h6.2c2.7 0 4.4 1.5 4.4 3.9 0 1.8-1 3.1-2.6 3.6L20.8 22h-3l-2.4-4.2H12V22H9zm3-6.6h2.8c1.2 0 1.9-.6 1.9-1.6s-.7-1.6-1.9-1.6H12v3.2z" fill="#e6b84e"/></svg>
       </span>
       RedesignCo
     </a>
@@ -537,6 +599,15 @@
     <span>© 2026 RedesignCo · Web redesign for small business</span>
   </div>
 </footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
 
 <script>
   // Before/after slider (pointer + keyboard)
@@ -579,6 +650,201 @@
     },{threshold:.12});
     els.forEach(function(e){io.observe(e);});
   })();
+
+  // Nav shadow on scroll
+  (function(){
+    var nav=document.querySelector('header.nav');
+    if(!nav) return;
+    var onScroll=function(){ nav.classList.toggle('scrolled', window.scrollY>12); };
+    window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  })();
+</script>
+
+<!-- HERO THREE.JS: ethereal utopian-cyberpunk nebula in gold with red accents, pointer-reactive, gold bloom, disposed on teardown -->
+<script type="module">
+  const mount = document.getElementById('heroCanvas');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Static gold/red aurora fallback stays visible via CSS if we bail here.
+  if (mount && !reduceMotion) {
+    try {
+      const THREE = await import('three');
+      const { EffectComposer } = await import('three/addons/postprocessing/EffectComposer.js');
+      const { RenderPass } = await import('three/addons/postprocessing/RenderPass.js');
+      const { UnrealBloomPass } = await import('three/addons/postprocessing/UnrealBloomPass.js');
+
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) || window.innerWidth < 720;
+      const COUNT = isMobile ? 5200 : 14000;
+      const useBloom = !isMobile;
+
+      let width = mount.clientWidth || 1, height = mount.clientHeight || 1;
+
+      const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true, powerPreference: 'high-performance' });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
+      renderer.setSize(width, height);
+      renderer.setClearColor(0x000000, 0);
+      mount.appendChild(renderer.domElement);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(55, width / height, 0.1, 100);
+      camera.position.set(0, 0, 16);
+
+      // Swirling nebula disc of points: gold core, warm amber mid, sparse red tips.
+      const positions = new Float32Array(COUNT * 3);
+      const colors = new Float32Array(COUNT * 3);
+      const seeds = new Float32Array(COUNT);
+      const radii = new Float32Array(COUNT);
+
+      const cGoldBright = new THREE.Color(0xf7dc8a); // luminous gold core
+      const cGold = new THREE.Color(0xe6b84e);        // gold
+      const cAmber = new THREE.Color(0xc9752a);        // warm amber edge
+      const cRed = new THREE.Color(0xe23b2e);          // sharp red accent
+      const tmp = new THREE.Color();
+
+      for (let i = 0; i < COUNT; i++) {
+        const r = Math.pow(Math.random(), 0.65) * 11 + 0.6;
+        const theta = Math.random() * Math.PI * 2;
+        const arm = Math.sin(theta * 2.0) * 0.6;
+        const y = (Math.random() - 0.5) * (3.4 * Math.exp(-r * 0.13));
+        positions[i*3]   = Math.cos(theta) * r;
+        positions[i*3+1] = y + arm;
+        positions[i*3+2] = Math.sin(theta) * r;
+        seeds[i] = Math.random() * Math.PI * 2;
+        radii[i] = r;
+
+        const t = Math.min(1, r / 12);
+        // ~14% of outer points flare red for the cyberpunk edge; the rest stay gold.
+        const redFlare = (t > 0.6 && Math.random() < 0.14);
+        if (redFlare) {
+          tmp.copy(cAmber).lerp(cRed, Math.random() * 0.85 + 0.15);
+        } else if (t < 0.45) {
+          tmp.copy(cGoldBright).lerp(cGold, t / 0.45);
+        } else {
+          tmp.copy(cGold).lerp(cAmber, (t - 0.45) / 0.55);
+        }
+        const glow = 0.55 + Math.random() * 0.45;
+        colors[i*3] = tmp.r * glow; colors[i*3+1] = tmp.g * glow; colors[i*3+2] = tmp.b * glow;
+      }
+
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      geo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+      geo.setAttribute('aSeed', new THREE.BufferAttribute(seeds, 1));
+      geo.setAttribute('aRadius', new THREE.BufferAttribute(radii, 1));
+
+      const uniforms = {
+        uTime: { value: 0 },
+        uSize: { value: (isMobile ? 26 : 34) * renderer.getPixelRatio() },
+        uPointer: { value: new THREE.Vector2(0, 0) }
+      };
+
+      const mat = new THREE.ShaderMaterial({
+        uniforms,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        vertexColors: true,
+        vertexShader: `
+          uniform float uTime; uniform float uSize; uniform vec2 uPointer;
+          attribute float aSeed; attribute float aRadius;
+          varying vec3 vColor; varying float vAlpha;
+          void main(){
+            vColor = color;
+            vec3 p = position;
+            float ang = uTime * (0.12 + 0.16 / (aRadius + 1.0));
+            float s = sin(ang), c = cos(ang);
+            p.xz = mat2(c, -s, s, c) * p.xz;
+            p.y += sin(uTime * 0.6 + aSeed) * 0.25;
+            vec2 pull = uPointer * 2.4;
+            float d = distance(p.xz, pull);
+            p.y += (1.6 / (d + 1.2)) * 0.9;
+            float twinkle = 0.6 + 0.4 * sin(uTime * 1.7 + aSeed * 3.0);
+            vAlpha = twinkle;
+            vec4 mv = modelViewMatrix * vec4(p, 1.0);
+            gl_PointSize = uSize * twinkle / -mv.z;
+            gl_Position = projectionMatrix * mv;
+          }`,
+        fragmentShader: `
+          varying vec3 vColor; varying float vAlpha;
+          void main(){
+            vec2 uv = gl_PointCoord - 0.5;
+            float d = length(uv);
+            if (d > 0.5) discard;
+            float a = smoothstep(0.5, 0.0, d);
+            gl_FragColor = vec4(vColor, a * vAlpha);
+          }`
+      });
+
+      const points = new THREE.Points(geo, mat);
+      scene.add(points);
+
+      let composer = null, renderPass = null, bloomPass = null;
+      if (useBloom) {
+        composer = new EffectComposer(renderer);
+        renderPass = new RenderPass(scene, camera);
+        composer.addPass(renderPass);
+        bloomPass = new UnrealBloomPass(new THREE.Vector2(width, height), 0.95, 0.75, 0.18);
+        composer.addPass(bloomPass);
+        composer.setPixelRatio(renderer.getPixelRatio());
+        composer.setSize(width, height);
+      }
+
+      const pointer = new THREE.Vector2(0, 0);
+      const targetPointer = new THREE.Vector2(0, 0);
+      window.addEventListener('pointermove', (e) => {
+        targetPointer.x = (e.clientX / window.innerWidth) * 2 - 1;
+        targetPointer.y = -((e.clientY / window.innerHeight) * 2 - 1);
+      }, { passive: true });
+
+      const clock = new THREE.Clock();
+      let running = true, visible = true;
+
+      const io = new IntersectionObserver((entries) => { visible = entries[0].isIntersecting; }, { threshold: 0 });
+      io.observe(mount);
+
+      function resize() {
+        width = mount.clientWidth || 1; height = mount.clientHeight || 1;
+        camera.aspect = width / height; camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
+        if (composer) composer.setSize(width, height);
+      }
+      const ro = new ResizeObserver(resize); ro.observe(mount);
+
+      renderer.setAnimationLoop(() => {
+        if (!running || !visible) return;
+        const t = clock.getElapsedTime();
+        uniforms.uTime.value = t;
+        pointer.lerp(targetPointer, 0.05);
+        uniforms.uPointer.value.copy(pointer);
+        camera.position.x += (pointer.x * 1.8 - camera.position.x) * 0.04;
+        camera.position.y += (pointer.y * 1.1 - camera.position.y) * 0.04;
+        camera.lookAt(0, 0, 0);
+        points.rotation.y = Math.sin(t * 0.05) * 0.15;
+        if (composer) composer.render(); else renderer.render(scene, camera);
+      });
+
+      mount.classList.add('ready');
+
+      function dispose() {
+        running = false;
+        renderer.setAnimationLoop(null);
+        ro.disconnect(); io.disconnect();
+        geo.dispose(); mat.dispose();
+        if (bloomPass) bloomPass.dispose();
+        if (composer) composer.dispose();
+        renderer.dispose();
+        if (renderer.domElement && renderer.domElement.parentNode) renderer.domElement.parentNode.removeChild(renderer.domElement);
+      }
+      window.addEventListener('pagehide', dispose, { once: true });
+
+      renderer.domElement.addEventListener('webglcontextlost', (e) => { e.preventDefault(); running = false; });
+      renderer.domElement.addEventListener('webglcontextrestored', () => { running = true; });
+    } catch (err) {
+      console.warn('Hero WebGL scene unavailable; showing static gold fallback.', err);
+      mount.classList.add('ready');
+    }
+  } else if (mount) {
+    mount.classList.add('ready');
+  }
 </script>
 </body>
 </html>
