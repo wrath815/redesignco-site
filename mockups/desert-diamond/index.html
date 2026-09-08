@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- mockup:desert-diamond-v1 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Desert Diamond Car Detailing — premium detailing, ceramic coating, PPF, wrapping & tinting in Al Quoz, Dubai.">
+<title>Desert Diamond Car Detailing — Al Quoz, Dubai</title>
+<style>
+  :root{
+    --black:#0a0a0b;
+    --panel:#111114;
+    --panel-2:#16161a;
+    --chrome:#c9ccd1;
+    --chrome-dim:#8a8d94;
+    --silver:#e9ebee;
+    --gold:#d4af37;
+    --gold-soft:#e8c766;
+    --red:#e11d2a;
+    --line:rgba(201,204,209,.12);
+    --line-2:rgba(201,204,209,.06);
+    --txt:#eceef1;
+    --txt-dim:#a4a8b0;
+    --radius:16px;
+    --maxw:1200px;
+    --ease:cubic-bezier(.16,.84,.44,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--black);
+    color:var(--txt);
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{line-height:1.1;font-weight:800;letter-spacing:-.02em}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;width:100%}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold-soft);
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+  .accent-red{color:var(--red)}
+  .grad-chrome{
+    background:linear-gradient(180deg,#fff 0%,var(--silver) 38%,var(--chrome) 62%,#9a9da3 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+
+  /* ---------- Honesty ribbon ---------- */
+  .honesty{
+    position:relative;z-index:60;
+    background:linear-gradient(90deg,#1a1408,#211a09);
+    border-bottom:1px solid rgba(212,175,55,.28);
+    color:var(--gold-soft);
+    font-size:11.5px;font-weight:600;letter-spacing:.04em;
+    text-align:center;padding:7px 14px;
+  }
+  .honesty span{opacity:.92}
+
+  /* ---------- Nav ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,10,11,.72);
+    backdrop-filter:saturate(140%) blur(14px);
+    -webkit-backdrop-filter:saturate(140%) blur(14px);
+    border-bottom:1px solid var(--line-2);
+    transition:background .3s var(--ease),border-color .3s var(--ease);
+  }
+  header.nav.scrolled{background:rgba(8,8,9,.92);border-bottom-color:var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:11px;min-width:0}
+  .brand .mark{flex:0 0 auto}
+  .brand .name{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+  .brand .name b{font-size:15px;font-weight:800;letter-spacing:.01em;white-space:nowrap}
+  .brand .name small{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--chrome-dim)}
+  .nav-links{display:none;gap:30px;align-items:center}
+  .nav-links a{font-size:14px;color:var(--txt-dim);font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--silver)}
+  .nav-cta{display:flex;align-items:center;gap:10px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-weight:700;font-size:14px;letter-spacing:.01em;
+    padding:11px 18px;border-radius:12px;cursor:pointer;border:1px solid transparent;
+    transition:transform .18s var(--ease),box-shadow .25s var(--ease),background .25s;
+    white-space:nowrap;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-wa{background:#25D366;color:#04250f;box-shadow:0 6px 20px -6px rgba(37,211,102,.5)}
+  .btn-wa:hover{box-shadow:0 10px 28px -8px rgba(37,211,102,.6)}
+  .btn-ghost{background:rgba(255,255,255,.03);border-color:var(--line);color:var(--silver)}
+  .btn-ghost:hover{border-color:var(--chrome-dim);background:rgba(255,255,255,.06)}
+  .btn-gold{background:linear-gradient(180deg,var(--gold-soft),var(--gold));color:#1a1405;box-shadow:0 8px 26px -8px rgba(212,175,55,.55)}
+  .btn-gold:hover{box-shadow:0 12px 32px -8px rgba(212,175,55,.7)}
+  .btn-lg{padding:15px 26px;font-size:15px;border-radius:14px}
+  .nav-cta .btn-wa .label-full{display:none}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;overflow:hidden;isolation:isolate;padding:70px 0 74px}
+  .hero-bg{position:absolute;inset:0;z-index:-2}
+  .hero-bg::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(120% 90% at 78% 8%,rgba(212,175,55,.14),transparent 46%),
+      radial-gradient(120% 100% at 20% 100%,rgba(225,29,42,.10),transparent 52%),
+      linear-gradient(180deg,#08080a 0%,#0c0c10 55%,#0a0a0c 100%);
+  }
+  .hero-bg::after{
+    content:"";position:absolute;inset:0;opacity:.5;
+    background:
+      repeating-linear-gradient(115deg,transparent 0 3px,rgba(201,204,209,.02) 3px 4px);
+    mask-image:radial-gradient(120% 90% at 70% 10%,#000,transparent 70%);
+  }
+  .gloss-sheen{
+    position:absolute;top:-30%;right:-10%;width:70%;height:160%;z-index:-1;
+    background:linear-gradient(115deg,transparent 40%,rgba(233,235,238,.06) 50%,transparent 60%);
+    transform:skewX(-12deg);
+    animation:sheen 7s var(--ease) infinite;
+    pointer-events:none;
+  }
+  @keyframes sheen{0%,72%{transform:translateX(-30%) skewX(-12deg);opacity:0}80%{opacity:1}100%{transform:translateX(60%) skewX(-12deg);opacity:0}}
+  .hero-grid{display:grid;gap:44px;align-items:center}
+  .hero h1{font-size:clamp(2.4rem,8.5vw,4.6rem);font-weight:900;letter-spacing:-.03em;margin:20px 0 0}
+  .hero h1 .line{display:block}
+  .hero .sub{margin-top:20px;font-size:clamp(1rem,3.6vw,1.18rem);color:var(--txt-dim);max-width:34ch}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px}
+  .hero-meta .mi{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--chrome-dim)}
+  .hero-meta .mi svg{flex:0 0 auto;color:var(--gold)}
+  .diamond-badge{
+    position:relative;
+    aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;
+    border:1px solid var(--line);
+    background:
+      radial-gradient(90% 80% at 50% 20%,rgba(212,175,55,.16),transparent 55%),
+      linear-gradient(160deg,#141418,#0b0b0e 70%);
+    display:grid;place-items:center;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 30px 70px -30px rgba(0,0,0,.8);
+  }
+  .diamond-badge .stage{position:absolute;inset:0;overflow:hidden}
+  .diamond-badge .facet{
+    position:absolute;inset:0;
+    background:conic-gradient(from 200deg at 50% 45%,rgba(201,204,209,.05),rgba(212,175,55,.12),rgba(225,29,42,.05),rgba(201,204,209,.05));
+    filter:blur(2px);
+    animation:spin 26s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .diamond-badge .glass{
+    position:relative;z-index:2;width:min(66%,240px);color:var(--gold-soft);
+    filter:drop-shadow(0 8px 26px rgba(212,175,55,.28));
+  }
+  .badge-cap{position:absolute;bottom:14px;left:0;right:0;z-index:3;text-align:center;
+    font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--chrome-dim)}
+
+  /* ---------- Trust strip ---------- */
+  .strip{border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);background:var(--panel)}
+  .strip-inner{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line-2)}
+  .strip-cell{background:var(--panel);padding:22px 16px;text-align:center}
+  .strip-cell .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--chrome-dim);display:flex;align-items:center;justify-content:center;gap:8px}
+  .strip-cell .k svg{color:var(--gold)}
+  .strip-cell .v{margin-top:8px;font-size:14px;color:var(--silver);font-weight:600}
+
+  /* ---------- Sections ---------- */
+  section{position:relative}
+  .sec{padding:74px 0}
+  .sec-head{max-width:620px;margin-bottom:40px}
+  .sec-head h2{font-size:clamp(1.9rem,6vw,2.9rem);margin-top:14px}
+  .sec-head p{margin-top:16px;color:var(--txt-dim);font-size:1.02rem}
+
+  /* Services */
+  .svc-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  .svc-card{
+    position:relative;background:linear-gradient(180deg,var(--panel-2),var(--panel));
+    border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;
+    transition:transform .3s var(--ease),border-color .3s,box-shadow .3s;
+    overflow:hidden;
+  }
+  .svc-card::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+    background:linear-gradient(180deg,var(--gold),transparent);opacity:0;transition:opacity .3s;
+  }
+  .svc-card:hover{transform:translateY(-4px);border-color:rgba(212,175,55,.4);box-shadow:0 20px 46px -26px rgba(0,0,0,.9)}
+  .svc-card:hover::before{opacity:1}
+  .svc-ico{
+    width:48px;height:48px;border-radius:12px;display:grid;place-items:center;
+    background:radial-gradient(120% 120% at 30% 20%,rgba(212,175,55,.16),rgba(255,255,255,.02));
+    border:1px solid var(--line);color:var(--gold-soft);margin-bottom:16px;
+  }
+  .svc-card h3{font-size:1.12rem;font-weight:700;letter-spacing:-.01em}
+  .svc-card p{margin-top:9px;font-size:.93rem;color:var(--txt-dim)}
+  .svc-card .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.02em;color:var(--chrome);
+    padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+
+  /* Before / after gloss */
+  .ba-wrap{margin-top:8px}
+  .ba{
+    position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+    aspect-ratio:16/9;user-select:none;touch-action:pan-y;
+    background:#08080a;
+  }
+  .ba .panel-img{position:absolute;inset:0}
+  .ba .dull{
+    background:
+      radial-gradient(140% 120% at 30% 20%,#1a1a1e,#0c0c0f 70%);
+  }
+  .ba .dull .car,.ba .shine .car{position:absolute;inset:0}
+  .ba .shine{clip-path:inset(0 0 0 50%);}
+  .ba .shine{
+    background:
+      radial-gradient(120% 100% at 70% 15%,rgba(212,175,55,.22),transparent 45%),
+      radial-gradient(140% 120% at 35% 30%,#26262d,#0e0e12 68%);
+  }
+  .ba .glosslay{position:absolute;inset:0;background:linear-gradient(115deg,transparent 44%,rgba(255,255,255,.10) 50%,transparent 56%);}
+  .ba .handle{
+    position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--silver);
+    box-shadow:0 0 0 1px rgba(0,0,0,.4);z-index:4;
+  }
+  .ba .knob{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;
+    width:42px;height:42px;border-radius:50%;background:rgba(10,10,11,.85);
+    border:1px solid var(--silver);display:grid;place-items:center;color:var(--silver);
+    backdrop-filter:blur(4px);
+  }
+  .ba .lbl{position:absolute;bottom:12px;z-index:5;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    padding:5px 10px;border-radius:8px;background:rgba(8,8,9,.7);border:1px solid var(--line);color:var(--chrome)}
+  .ba .lbl.before{left:12px}
+  .ba .lbl.after{right:12px;color:var(--gold-soft);border-color:rgba(212,175,55,.35)}
+  .ba-cap{margin-top:12px;font-size:12px;color:var(--chrome-dim);text-align:center}
+
+  /* Why choose band */
+  .why{background:
+    linear-gradient(180deg,transparent,rgba(212,175,55,.03) 40%,transparent),
+    var(--panel)}
+  .why-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  .why-item{display:flex;gap:16px;padding:20px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--panel-2),transparent)}
+  .why-item .wi{flex:0 0 auto;width:44px;height:44px;border-radius:11px;display:grid;place-items:center;color:var(--gold-soft);background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.2)}
+  .why-item h3{font-size:1.05rem;font-weight:700}
+  .why-item p{margin-top:6px;font-size:.92rem;color:var(--txt-dim)}
+
+  /* Contact / location */
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:20px}
+  .contact-card{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px}
+  .contact-card h3{font-size:1.3rem}
+  .cc-row{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--line-2)}
+  .cc-row:last-child{border-bottom:0}
+  .cc-row .ci{flex:0 0 auto;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:var(--gold-soft);background:rgba(255,255,255,.03);border:1px solid var(--line)}
+  .cc-row .ct b{display:block;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--chrome-dim);font-weight:700}
+  .cc-row .ct a,.cc-row .ct span{font-size:1rem;color:var(--silver);font-weight:500}
+  .cc-row .ct a:hover{color:var(--gold-soft)}
+  .map-card{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:280px;
+    background:
+      linear-gradient(180deg,rgba(10,10,11,.2),rgba(10,10,11,.75)),
+      repeating-linear-gradient(0deg,#101014 0 22px,#0d0d10 22px 24px),
+      repeating-linear-gradient(90deg,#101014 0 30px,#0d0d10 30px 32px);
+    display:flex;align-items:flex-end}
+  .map-card .roads{position:absolute;inset:0;opacity:.5}
+  .map-pin{position:absolute;top:44%;left:50%;transform:translate(-50%,-100%);z-index:3;color:var(--red);filter:drop-shadow(0 6px 10px rgba(0,0,0,.6))}
+  .map-pin .pulse{position:absolute;left:50%;top:100%;transform:translateX(-50%);width:14px;height:6px;border-radius:50%;background:rgba(225,29,42,.5);animation:pulse 2.4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.3;transform:translateX(-50%) scale(.8)}50%{opacity:.9;transform:translateX(-50%) scale(1.4)}}
+  .map-card .mc-cap{position:relative;z-index:3;padding:18px;width:100%;background:linear-gradient(180deg,transparent,rgba(6,6,8,.9))}
+  .map-card .mc-cap b{display:block;font-size:1rem;color:var(--silver)}
+  .map-card .mc-cap span{font-size:.85rem;color:var(--chrome-dim)}
+  .map-card .mc-cap a{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:.85rem;color:var(--gold-soft);font-weight:600}
+
+  /* Final CTA */
+  .cta-final{
+    position:relative;overflow:hidden;border-radius:22px;
+    background:
+      radial-gradient(90% 140% at 82% 0%,rgba(212,175,55,.16),transparent 50%),
+      radial-gradient(80% 120% at 12% 100%,rgba(225,29,42,.12),transparent 55%),
+      linear-gradient(160deg,#141319,#0b0b0e);
+    border:1px solid var(--line);padding:44px 26px;text-align:center;
+  }
+  .cta-final h2{font-size:clamp(1.7rem,6vw,2.7rem)}
+  .cta-final p{margin:16px auto 0;max-width:44ch;color:var(--txt-dim)}
+  .cta-final .hero-actions{justify-content:center}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line-2);padding:36px 0 46px;color:var(--chrome-dim)}
+  .foot-grid{display:flex;flex-direction:column;gap:18px}
+  .foot-brand{display:flex;align-items:center;gap:11px}
+  .foot-brand b{font-size:15px;color:var(--silver);font-weight:800}
+  .foot-note{font-size:12.5px;line-height:1.7}
+  .foot-legal{font-size:11.5px;color:#5f636b;border-top:1px solid var(--line-2);padding-top:18px;margin-top:6px}
+  .foot-legal .rc{color:var(--gold-soft);font-weight:600}
+
+  /* Sticky mobile WhatsApp bar */
+  .mobile-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:55;
+    display:flex;gap:10px;padding:11px 14px calc(11px + env(safe-area-inset-bottom));
+    background:rgba(8,8,9,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-top:1px solid var(--line);
+  }
+  .mobile-bar .btn{flex:1}
+  .mobile-bar .btn-call{flex:0 0 auto;width:52px;padding:0}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Responsive ---------- */
+  @media(min-width:720px){
+    .strip-inner{grid-template-columns:repeat(4,1fr)}
+    .svc-grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(min-width:960px){
+    .nav-links{display:flex}
+    .nav-cta .btn-wa .label-full{display:inline}
+    .hero{padding:96px 0 90px}
+    .hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}
+    .svc-grid{grid-template-columns:repeat(3,1fr)}
+    .contact-grid{grid-template-columns:1fr 1fr}
+    .mobile-bar{display:none}
+    body{padding-bottom:0}
+  }
+  @media(max-width:959px){ body{padding-bottom:76px} }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .gloss-sheen,.facet,.map-pin .pulse,.ba .glosslay{animation:none!important}
+    .reveal{opacity:1;transform:none;transition:none}
+    .svc-card:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Honesty ribbon (design demo, not the official site) ===== -->
+<div class="honesty" role="note">
+  <span>Design concept by RedesignCo — not affiliated with Desert Diamond Car Detailing. Demo mockup, not the official site.</span>
+</div>
+
+<!-- ===== Nav ===== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Desert Diamond home">
+      <span class="mark" aria-hidden="true">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+          <path d="M16 2 30 12 16 30 2 12Z" stroke="#d4af37" stroke-width="1.4" fill="url(#dg)"/>
+          <path d="M2 12h28M11 4 8 12l8 18M21 4l3 8-8 18" stroke="#d4af37" stroke-width="1" opacity=".7"/>
+          <defs><linearGradient id="dg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1c1c22"/><stop offset="1" stop-color="#0c0c0f"/></linearGradient></defs>
+        </svg>
+      </span>
+      <span class="name"><b>DESERT DIAMOND</b><small>Car Detailing · Dubai</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#work">Results</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Visit</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-wa" href="https://wa.me/971525260632" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/><path d="M12 2a10 10 0 0 0-8.5 15.28L2 22l4.84-1.47A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-2.87.87.88-2.8-.2-.32A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+        <span class="label-full">WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg"><div class="gloss-sheen"></div></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Al Quoz Industrial Area 3 · Dubai</span>
+      <h1>
+        <span class="line grad-chrome">Detailing that</span>
+        <span class="line">matches the <span class="accent-red">machine.</span></span>
+      </h1>
+      <p class="sub">Ceramic coating, paint protection film, wraps and full detailing — finished to a mirror gloss by a team that treats every panel like showroom glass.</p>
+      <div class="hero-actions">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/971525260632" target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.28L2 22l4.84-1.47A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-2.87.87.88-2.8-.2-.32A8.2 8.2 0 1 1 12 20.2Z"/><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37Z"/></svg>
+          Book on WhatsApp
+        </a>
+        <a class="btn btn-ghost btn-lg" href="#services">Explore services</a>
+      </div>
+      <div class="hero-meta">
+        <span class="mi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.4"/></svg>22nd Street, Al Quoz 3</span>
+        <span class="mi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z"/></svg>+971 52 526 0632</span>
+        <span class="mi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 5 5L20 6"/></svg>Walk-ins &amp; appointments</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="diamond-badge" aria-hidden="true">
+        <div class="stage"><div class="facet"></div></div>
+        <svg class="glass" viewBox="0 0 200 150" fill="none">
+          <path d="M60 26h80l24 30-64 74-64-74 24-30Z" stroke="#d4af37" stroke-width="1.6"/>
+          <path d="M36 56h128M60 26 44 56l56 74M140 26l20 30-56 74M100 26v104M84 26 70 56m46-30 14 30" stroke="#e8c766" stroke-width=".9" opacity=".65"/>
+          <path d="M60 26h80l24 30-64 74-64-74 24-30Z" fill="url(#dgrad)" opacity=".25"/>
+          <defs><linearGradient id="dgrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8c766"/><stop offset="1" stop-color="#8a6d17"/></linearGradient></defs>
+        </svg>
+        <div class="badge-cap">Signature gloss finish</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Trust strip ===== -->
+<div class="strip">
+  <div class="wrap"><div class="strip-inner">
+    <div class="strip-cell">
+      <div class="k"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 4 6v6c0 5 8 10 8 10s8-5 8-10V6l-8-4Z"/></svg>Protection</div>
+      <div class="v">Ceramic &amp; PPF specialists</div>
+    </div>
+    <div class="strip-cell">
+      <div class="k"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M19 5l-3 3M8 16l-3 3"/></svg>Finish</div>
+      <div class="v">Mirror-gloss detailing</div>
+    </div>
+    <div class="strip-cell">
+      <div class="k"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.2"/></svg>Location</div>
+      <div class="v">In the heart of Al Quoz</div>
+    </div>
+    <div class="strip-cell">
+      <div class="k"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z"/></svg>Fast reply</div>
+      <div class="v">Quote over WhatsApp</div>
+    </div>
+  </div></div>
+</div>
+
+<!-- ===== Services ===== -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2>Full-service care, <span class="grad-chrome">one workshop.</span></h2>
+      <p>From a quick manual wash to a multi-stage ceramic package, wraps, tint and mechanical work — everything your car needs under one roof in Al Quoz.</p>
+    </div>
+    <div class="svc-grid">
+
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 13l2-5a3 3 0 0 1 2.8-2h8.4A3 3 0 0 1 19 8l2 5v5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1H7v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-5Z"/><circle cx="7.5" cy="15.5" r="1"/><circle cx="16.5" cy="15.5" r="1"/></svg></div>
+        <h3>Car Detailing</h3>
+        <p>Deep exterior and interior detailing — decontamination, correction and a protected, showroom-level finish.</p>
+        <div class="tags"><span class="tag">Car Polishing</span><span class="tag">Interior Cleaning</span><span class="tag">Manual Car Wash</span></div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 4 6v5c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Ceramic Coating</h3>
+        <p>Multi-year nano-ceramic protection that locks in gloss, beads water and shrugs off Dubai heat and dust.</p>
+        <div class="tags"><span class="tag">Gloss boost</span><span class="tag">Hydrophobic</span><span class="tag">UV shield</span></div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M7 5v14"/></svg></div>
+        <h3>Paint Protection Film</h3>
+        <p>Self-healing PPF over high-impact panels — stone chips, scratches and swirls kept off your factory paint.</p>
+        <div class="tags"><span class="tag">Self-healing</span><span class="tag">Full &amp; partial</span></div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7c4-2 12-2 16 0M4 7v10c4 2 12 2 16 0V7"/><path d="M4 12c4 2 12 2 16 0"/></svg></div>
+        <h3>Car Wrapping</h3>
+        <p>Colour-change and satin/matte vinyl wraps applied clean and tight, with crisp edges and full reversibility.</p>
+        <div class="tags"><span class="tag">Colour change</span><span class="tag">Satin / Matte</span><span class="tag">Gloss</span></div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" opacity=".25"/><path d="M12 3v18"/></svg></div>
+        <h3>Window Tinting</h3>
+        <p>Heat-rejection window films that cut glare and cabin temperature while keeping a clean, legal look.</p>
+        <div class="tags"><span class="tag">Heat rejection</span><span class="tag">UV block</span></div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 3 21 10l-9 9-5 1 1-5 9-9Z"/><path d="m12.5 5.5 6 6"/></svg></div>
+        <h3>Scratch &amp; Paint Repair</h3>
+        <p>Scuffs, scratches and kerb rash corrected and colour-matched — plus full rim painting for a factory-fresh face.</p>
+        <div class="tags"><span class="tag">Colour match</span><span class="tag">Rim Painting</span></div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 20V9l6-5 6 5v11"/><path d="M9 20v-6h6v6"/><path d="M10 4 6 9m8-5 4 5"/></svg></div>
+        <h3>Car Modification</h3>
+        <p>Interior and exterior custom work to make a car your own — trim, upholstery and standout details.</p>
+        <div class="tags"><span class="tag">Upholstery</span><span class="tag">Carbon Fiber</span><span class="tag">Body Kits</span><span class="tag">Sound Proofing</span><span class="tag">Star Roof</span><span class="tag">Leather Repair</span></div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2 2.3-2.3Z"/></svg></div>
+        <h3>Car Repair</h3>
+        <p>Mechanical service to keep the car running as good as it looks — routine and on-demand fixes.</p>
+        <div class="tags"><span class="tag">Suspension</span><span class="tag">Oil Change</span><span class="tag">Brake Pads</span><span class="tag">AC Repair</span><span class="tag">Spark Plug</span><span class="tag">Water Pump</span></div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3c3 3 6 5.5 6 9a6 6 0 0 1-12 0c0-3.5 3-6 6-9Z"/><path d="M12 8c1.6 1.6 3 3 3 5a3 3 0 0 1-6 0c0-2 1.4-3.4 3-5Z" opacity=".5"/></svg></div>
+        <h3>Manual Wash &amp; Polish</h3>
+        <p>Hand wash and machine polishing that removes swirls and brings depth back to tired, sun-baked paint.</p>
+        <div class="tags"><span class="tag">Hand wash</span><span class="tag">Machine polish</span><span class="tag">Gloss restore</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Before / After results ===== -->
+<section class="sec" id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Dull → Diamond</span>
+      <h2>See the <span class="accent-red">gloss</span> come back.</h2>
+      <p>Drag the handle to compare a flat, oxidised finish against a corrected, coated one. Illustrative demo of the transformation a full detail delivers.</p>
+    </div>
+    <div class="ba-wrap reveal">
+      <div class="ba" id="ba" aria-label="Before and after gloss comparison slider">
+        <div class="panel-img dull"><div class="car"></div></div>
+        <div class="panel-img shine" id="baShine"><div class="car"></div><div class="glosslay"></div></div>
+        <span class="lbl before">Before · flat</span>
+        <span class="lbl after">After · coated</span>
+        <div class="handle" id="baHandle">
+          <div class="knob"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6-4 6 4 6M15 6l4 6-4 6"/></svg></div>
+        </div>
+      </div>
+      <p class="ba-cap">Illustrative rendering — not a photo of a specific customer vehicle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Why choose ===== -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why Desert Diamond</span>
+      <h2>Premium work, <span class="grad-chrome">handled properly.</span></h2>
+      <p>Built for owners who found us on Google Maps and want a straight answer, a fair quote and a finish worth paying for.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal">
+        <div class="wi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 4 6v6c0 5 8 10 8 10s8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <div><h3>Protection-first approach</h3><p>Ceramic and PPF applied over a properly corrected surface — so the shine you pay for actually lasts in Dubai conditions.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="wi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z"/></svg></div>
+        <div><h3>Reachable on WhatsApp</h3><p>Send a photo, get a clear quote. No call centre runaround — you talk to the workshop directly.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="wi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
+        <div><h3>Everything in one place</h3><p>Detailing, wraps, tint, PPF, modification and mechanical repair — one workshop, one point of contact.</p></div>
+      </div>
+      <div class="why-item reveal">
+        <div class="wi"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
+        <div><h3>Easy to find in Al Quoz</h3><p>Right in Al Quoz Industrial Area 3 on 22nd Street — an easy drop-off for the whole community.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact / location ===== -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visit &amp; contact</span>
+      <h2>Find us in <span class="grad-chrome">Al Quoz.</span></h2>
+      <p>Drop the car off, send a photo for a quote, or follow the work on Instagram.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="cc-row">
+          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="10" r="2.4"/></svg></div>
+          <div class="ct"><b>Workshop</b><span>Al Quoz Industrial Area 3, 22nd Street, Dubai, UAE</span></div>
+        </div>
+        <div class="cc-row">
+          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49 3 1.29 3 .86 3.54.81.54-.05 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg></div>
+          <div class="ct"><b>WhatsApp / Call</b><a href="https://wa.me/971525260632" target="_blank" rel="noopener">+971 52 526 0632</a></div>
+        </div>
+        <div class="cc-row">
+          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></div>
+          <div class="ct"><b>Instagram</b><a href="https://instagram.com/desert_diamond_dubai" target="_blank" rel="noopener">@desert_diamond_dubai</a></div>
+        </div>
+        <div class="cc-row">
+          <div class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div class="ct"><b>Best way to book</b><span>Message on WhatsApp with a photo for a fast quote</span></div>
+        </div>
+      </div>
+      <a class="map-card reveal" href="https://www.google.com/maps/search/?api=1&query=Desert+Diamond+Car+Care+Center+Al+Quoz+Dubai" target="_blank" rel="noopener" aria-label="Open Desert Diamond location in Google Maps">
+        <div class="roads" aria-hidden="true"></div>
+        <div class="map-pin" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg><div class="pulse"></div></div>
+        <div class="mc-cap">
+          <b>Desert Diamond Car Care Center</b>
+          <span>Al Quoz Industrial Area 3 · 22nd Street, Dubai</span>
+          <a>Open in Google Maps
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA ===== -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-final reveal">
+      <span class="eyebrow" style="justify-content:center">Ready when you are</span>
+      <h2>Give your car the <span class="grad-chrome">diamond</span> treatment.</h2>
+      <p>Send a quick photo on WhatsApp and we'll come back with a straight quote and the right package for your car.</p>
+      <div class="hero-actions">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/971525260632" target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.28L2 22l4.84-1.47A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-2.87.87.88-2.8-.2-.32A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+          Message on WhatsApp
+        </a>
+        <a class="btn btn-gold btn-lg" href="tel:+971525260632">Call +971 52 526 0632</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 2 30 12 16 30 2 12Z" stroke="#d4af37" stroke-width="1.4"/><path d="M2 12h28" stroke="#d4af37" stroke-width="1" opacity=".7"/></svg>
+      <b>DESERT DIAMOND CAR DETAILING</b>
+    </div>
+    <p class="foot-note">
+      Al Quoz Industrial Area 3, 22nd Street, Dubai, UAE · WhatsApp +971 52 526 0632 · <a href="https://instagram.com/desert_diamond_dubai" target="_blank" rel="noopener" style="color:var(--gold-soft)">@desert_diamond_dubai</a><br>
+      Car Detailing · Ceramic Coating · Paint Protection Film · Car Wrapping · Window Tinting · Polishing · Modification · Repair
+    </p>
+    <p class="foot-legal">
+      This page is a <span class="rc">design concept created by RedesignCo</span> and is not affiliated with, endorsed by, or the official website of Desert Diamond Car Detailing. Business name, address and contact details are shown for demonstration only.
+    </p>
+  </div>
+</footer>
+
+<!-- ===== Sticky mobile WhatsApp bar ===== -->
+<div class="mobile-bar">
+  <a class="btn btn-wa" href="https://wa.me/971525260632" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.28L2 22l4.84-1.47A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-2.87.87.88-2.8-.2-.32A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+    WhatsApp Quote
+  </a>
+  <a class="btn btn-gold btn-call" href="tel:+971525260632" aria-label="Call Desert Diamond">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 0 0 6 6L15 14l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2Z"/></svg>
+  </a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Nav shadow on scroll
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 8); };
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  // Reveal on scroll
+  var reveals = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveals.forEach(function(r){ r.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(r){ io.observe(r); });
+  }
+
+  // Before/after slider
+  var ba = document.getElementById('ba');
+  if (ba) {
+    var shine = document.getElementById('baShine');
+    var handle = document.getElementById('baHandle');
+    var dragging = false;
+    function setPos(clientX){
+      var rect = ba.getBoundingClientRect();
+      var pct = (clientX - rect.left) / rect.width;
+      pct = Math.max(0.04, Math.min(0.96, pct));
+      shine.style.clipPath = 'inset(0 0 0 ' + (pct*100) + '%)';
+      handle.style.left = (pct*100) + '%';
+    }
+    var start = function(e){ dragging = true; setPos((e.touches?e.touches[0]:e).clientX); };
+    var move  = function(e){ if(!dragging) return; setPos((e.touches?e.touches[0]:e).clientX); };
+    var end   = function(){ dragging = false; };
+    ba.addEventListener('mousedown', start); window.addEventListener('mousemove', move); window.addEventListener('mouseup', end);
+    ba.addEventListener('touchstart', start, {passive:true}); window.addEventListener('touchmove', move, {passive:true}); window.addEventListener('touchend', end);
+  }
+})();
+</script>
+</body>
+</html>
