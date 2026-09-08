@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" fill="none" role="img" aria-label="Concept tile: orbital rings">
+  <defs><radialGradient id="g4" cx="0.5" cy="0.5" r="0.7"><stop offset="0" stop-color="#171310"/><stop offset="1" stop-color="#09090b"/></radialGradient></defs>
+  <rect width="800" height="560" fill="url(#g4)"/>
+  <g transform="translate(400 280)" fill="none">
+    <ellipse rx="200" ry="70" stroke="#e6b84e" stroke-width="1.6" opacity=".7"/>
+    <ellipse rx="150" ry="130" stroke="#e6b84e" stroke-width="1.2" opacity=".45" transform="rotate(28)"/>
+    <ellipse rx="180" ry="100" stroke="#e23b2e" stroke-width="1.2" opacity=".5" transform="rotate(-20)"/>
+    <circle r="30" fill="#f4d47f" opacity=".95"/>
+    <circle cx="200" cy="0" r="5" fill="#e6b84e"/>
+    <circle cx="-130" cy="70" r="4" fill="#e23b2e"/>
+  </g>
+</svg>

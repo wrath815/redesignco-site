@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" fill="none" role="img" aria-label="Mythic cyberpunk skyline silhouette in golden haze">
+  <defs>
+    <linearGradient id="cs-haze" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#e6b84e" stop-opacity=".22"/>
+      <stop offset="0.6" stop-color="#e6b84e" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#e6b84e" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cs-tower" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#181410"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+  </defs>
+  <rect y="300" width="1600" height="400" fill="url(#cs-haze)"/>
+  <g fill="url(#cs-tower)" stroke="#e6b84e" stroke-opacity=".28" stroke-width="1">
+    <path d="M0 700 V520 H70 V470 H120 V560 H180 V430 H220 V700 Z"/>
+    <path d="M240 700 V480 H286 V360 L312 340 L338 360 V480 H384 V700 Z"/>
+    <path d="M410 700 V540 H470 V500 H520 V440 H556 V700 Z"/>
+    <path d="M600 700 V400 H636 V250 L660 226 L684 250 V400 H720 V700 Z"/>
+    <path d="M760 700 V520 H812 V470 H864 V560 H916 V700 Z"/>
+    <path d="M950 700 V470 H1000 V330 H1050 V470 H1100 V700 Z"/>
+    <path d="M1130 700 V430 H1170 V300 L1196 276 L1222 300 V430 H1262 V700 Z"/>
+    <path d="M1290 700 V520 H1348 V450 H1400 V560 H1452 V700 Z"/>
+    <path d="M1480 700 V480 H1526 V360 H1572 V480 H1600 V700 Z"/>
+  </g>
+  <g fill="#e6b84e">
+    <circle cx="660" cy="226" r="3.4" opacity=".95"/>
+    <circle cx="312" cy="340" r="2.6" opacity=".8"/>
+    <circle cx="1196" cy="276" r="3" opacity=".9"/>
+  </g>
+  <g fill="#e23b2e">
+    <circle cx="220" cy="430" r="2.6" opacity=".9"/>
+    <circle cx="1025" cy="330" r="2.6" opacity=".9"/>
+    <circle cx="864" cy="470" r="2.2" opacity=".8"/>
+  </g>
+</svg>

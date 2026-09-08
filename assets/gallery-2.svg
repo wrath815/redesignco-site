@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" fill="none" role="img" aria-label="Concept tile: gold grid horizon">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b0b0d"/><stop offset="1" stop-color="#161210"/></linearGradient>
+    <linearGradient id="g2g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6b84e" stop-opacity="0"/><stop offset="1" stop-color="#e6b84e" stop-opacity=".9"/></linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#g2)"/>
+  <circle cx="400" cy="300" r="120" fill="none" stroke="#e6b84e" stroke-width="2" opacity=".6"/>
+  <circle cx="400" cy="300" r="120" fill="#e6b84e" opacity=".08"/>
+  <g stroke="url(#g2g)" stroke-width="1.2" opacity=".8">
+    <path d="M0 340 H800 M60 400 H740 M120 460 H680 M180 520 H620"/>
+    <path d="M100 560 L260 340 M300 560 L360 340 M500 560 L440 340 M700 560 L540 340 M400 560 V340"/>
+  </g>
+  <path d="M280 300 h240" stroke="#e23b2e" stroke-width="2" opacity=".75"/>
+</svg>

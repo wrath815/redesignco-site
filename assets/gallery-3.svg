@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" fill="none" role="img" aria-label="Concept tile: monolith beam">
+  <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12100c"/><stop offset="1" stop-color="#0b0b0d"/></linearGradient></defs>
+  <rect width="800" height="560" fill="url(#g3)"/>
+  <rect x="330" y="80" width="140" height="400" rx="6" fill="#181410" stroke="#e6b84e" stroke-opacity=".4"/>
+  <rect x="360" y="120" width="80" height="4" rx="2" fill="#e6b84e" opacity=".8"/>
+  <rect x="360" y="150" width="60" height="4" rx="2" fill="#e6b84e" opacity=".5"/>
+  <rect x="360" y="180" width="80" height="4" rx="2" fill="#e23b2e" opacity=".7"/>
+  <circle cx="400" cy="280" r="28" fill="#e6b84e" opacity=".9"/>
+  <path d="M400 8 V80 M400 480 V552" stroke="#f4d47f" stroke-width="2" opacity=".6"/>
+  <g fill="#e6b84e" opacity=".7"><circle cx="150" cy="200" r="3"/><circle cx="650" cy="360" r="3"/><circle cx="200" cy="420" r="2.4"/><circle cx="600" cy="160" r="2.4"/></g>
+</svg>
