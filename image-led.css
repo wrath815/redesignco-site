@@ -1,0 +1,85 @@
+/* image-led-v5: preserve the established brand, art first.
+   Layers: raster 0, scrim 1, pointer-transparent particles 2, content 3, nav 50. */
+section[id]{scroll-margin-top:90px}
+a:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--gold-bright);outline-offset:5px}
+.nav-links a.btn-solid{color:#14100a}
+.btn{white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.hero{min-height:calc(100svh - 70px);padding:60px 0 72px;display:flex;align-items:center;isolation:isolate;view-timeline-name:--hero;view-timeline-axis:block;background:#08080a}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:60% 50%;transform:scale(1.06)}
+.hero-kyra-wrap{position:absolute;top:0;right:0;bottom:0;width:52%;z-index:2;pointer-events:none;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 34%,#000 100%);mask-image:linear-gradient(90deg,transparent 0,#000 34%,#000 100%)}
+.hero-kyra{position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:none;object-fit:cover;object-position:50% 8%;transform-origin:62% 62%}
+.hero::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(90deg,rgba(8,8,10,.92),rgba(8,8,10,.62) 40%,rgba(8,8,10,.12) 66%,transparent 82%),linear-gradient(0deg,rgba(8,8,10,.72),transparent 40%)}
+.hero-canvas{z-index:2;background:none;mix-blend-mode:screen;-webkit-mask-image:linear-gradient(90deg,transparent 12%,#000 55%,#000);mask-image:linear-gradient(90deg,transparent 12%,#000 55%,#000)}
+.hero-canvas.ready{opacity:.82}
+.hero-grid{z-index:4;display:block}
+.hero-grid>div{max-width:710px}
+.hero h1{font-size:clamp(2.8rem,4.7vw,4.2rem);max-width:15ch;line-height:1.1;margin-top:18px;letter-spacing:-.045em;text-shadow:0 2px 28px #08080a}
+.hero h1 em{font-style:normal;background:none;-webkit-text-fill-color:var(--gold-bright);color:var(--gold-bright)}
+.hero .lead{max-width:42ch;color:#e0ded9;font-size:1.05rem;margin:24px 0 30px;text-shadow:0 2px 12px #08080a}
+.hero .eyebrow{color:#f4d47f;letter-spacing:.13em;font-size:.68rem}
+.hero .btn-ghost{background:rgba(8,8,10,.72)}
+.comparison-grid{display:grid;grid-template-columns:.85fr 1fr;align-items:center;gap:80px}
+.comparison-grid .sec-head{margin:0}
+.comparison-grid p{color:var(--text-soft)}
+.comparison-grid .ownership{font-size:.85rem;color:var(--gold-bright);margin-top:28px}
+.compare-cap,.contact .fine{color:var(--text-soft)}
+.pin{height:240svh;background:#08080a;margin-bottom:80px}
+.pin-sticky{height:100svh}
+.pin-art{top:0;left:48%;width:54%;height:110%;background:none;opacity:1;transform:scale(1.04);transform-origin:center;overflow:hidden}
+.pin-art img{width:100%;height:100%;object-fit:cover;object-position:60% center}
+.pin-sticky::after{background:linear-gradient(90deg,#08080a 32%,rgba(8,8,10,.85) 47%,transparent 78%),linear-gradient(0deg,#08080a,transparent 18%,transparent 80%,#08080a)}
+.pin-stage{width:min(1140px,92vw);text-align:left}
+.pin-lines{width:48%;min-height:280px}
+.pin-line{place-content:center start}
+.pin-line h2,.pin-line p{margin-inline:0}
+.pin-line h2{line-height:1.15}
+.pin-progress{margin:30px 0 0;width:160px}
+.adeline-intro{display:flex;align-items:center;gap:26px;max-width:590px;margin:0 auto 36px;text-align:left;position:relative;z-index:2;padding-bottom:30px;border-bottom:1px solid var(--line)}
+.adeline-intro img{width:156px;height:auto;flex:none;border-radius:12px;border:1px solid var(--line)}
+.adeline-intro h3{font-size:1.5rem}
+.contact .adeline-intro p{font-size:.88rem;margin:12px 0 0;max-width:34ch}
+.contact .fine a{overflow-wrap:anywhere}
+@keyframes city-depth{from{transform:translateY(0) scale(1.06)}to{transform:translateY(6%) scale(1.14)}}
+@media(prefers-reduced-motion:no-preference){
+ @supports(animation-timeline:view()){
+  .hero-bg img{animation:city-depth linear both;animation-timeline:--hero;animation-range:exit 0% exit 100%;will-change:transform}
+ }
+}
+@media(max-width:1100px){.nav-links{gap:18px;font-size:.85rem}.nav .btn{padding:10px 14px}.comparison-grid{gap:40px}.hero-grid>div{max-width:620px}}
+@media(max-width:767px){
+ .hero{padding:48px 0 44px;align-items:flex-end;min-height:calc(100svh - 70px)}
+ .hero-bg img{object-position:60% center}
+ .hero::after{background:linear-gradient(0deg,rgba(8,8,10,.96),rgba(8,8,10,.7) 45%,rgba(8,8,10,.05) 85%)}
+ .hero h1{font-size:clamp(2.6rem,8vw,3.6rem);max-width:15ch}
+ .hero .lead{font-size:.98rem;max-width:39ch;margin:18px 0 24px}
+ .hero .eyebrow{font-size:.59rem;letter-spacing:.08em}
+ .hero-cta{gap:10px}.hero-cta .btn{font-size:.8rem;padding:12px 14px}
+ .hero-canvas{-webkit-mask-image:linear-gradient(0deg,transparent 5%,#000 60%);mask-image:linear-gradient(0deg,transparent 5%,#000 60%)}
+ .comparison-grid{grid-template-columns:1fr;gap:28px}
+ .pin{height:210svh;margin-bottom:48px}
+ .pin-art{left:12%;width:92%;height:110%}
+ .pin-sticky::after{background:linear-gradient(0deg,#08080a,rgba(8,8,10,.78) 48%,rgba(8,8,10,.15) 90%)}
+ .pin-stage{align-self:end;margin-bottom:13svh}
+ .pin-lines{width:100%;min-height:240px}
+ .pin-line h2{font-size:2.3rem;max-width:17ch}.pin-line p{font-size:.98rem}
+ .pin-progress{margin-top:16px}
+}
+@media(max-width:600px){
+ .brand{font-size:1.03rem;gap:8px}.mark{width:29px;height:29px}
+ .nav .btn{font-size:.76rem;padding:10px 12px}.nav .btn svg{display:none}
+ .adeline-intro{gap:18px;align-items:center}.adeline-intro img{width:112px}.adeline-intro h3{font-size:1.23rem}
+ .contact{padding:32px 20px}.contact .adeline-intro p{font-size:.77rem}
+ .contact h2{font-size:2rem}.contact>p{font-size:1rem}.contact-cta .btn{font-size:.85rem}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .hero-city,.pin-art,.pin-stage{transform:none!important}
+ .hero-canvas{display:none}
+ .pin{height:auto}.pin-sticky{position:relative;height:auto;min-height:0;padding:70px 0}
+ .pin-stage{margin-bottom:0}.pin-lines{min-height:0}.pin-line{visibility:visible;position:relative;opacity:1;transform:none;display:block;margin-bottom:36px}
+ .pin-line h2{margin-bottom:15px}.pin-progress{display:none}
+ .pin-art{opacity:.3!important}
+ .g-card[aria-hidden="true"]{display:none}
+}

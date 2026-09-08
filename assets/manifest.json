@@ -1,0 +1,22 @@
+{
+  "note": "Kyra is a fictional AI brand mascot. Swap hero pose by changing hero.src / hero.srcset here and the matching <img class=\"hero-kyra\"> in index.html.",
+  "hero": {
+    "src": "assets/kyra-hero-905.webp",
+    "srcset": "assets/kyra-hero-600.webp 600w, assets/kyra-hero-905.webp 905w",
+    "sizes": "(max-width: 767px) 100vw, 46vw",
+    "alt": "Kyra, a fictional AI brand mascot with purple hair and glasses, standing in a neon-lit executive office"
+  },
+  "hero_background": {
+    "webp": "assets/kyra-office-neon-1600.webp",
+    "fallback": "assets/kyra-office-neon.png"
+  },
+  "portrait": {
+    "src": "assets/kyra-portrait-480.webp",
+    "srcset": "assets/kyra-portrait-240.webp 240w, assets/kyra-portrait-480.webp 480w"
+  },
+  "alternate_poses": [
+    "composer-images/image_a0c314.png (glasses-touch)",
+    "composer-images/image_382b9b.png (hand on window)",
+    "composer-images/image_503016.png (hand on lapel)"
+  ]
+}
