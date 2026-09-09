@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aperture & Vow — Wedding Photography Concept by RedesignCo</title>
+<meta name="description" content="Concept homepage for a wedding & couples photographer — mobile-first, booking-focused, by RedesignCo." />
+<style>
+  :root{
+    --ink:#1a1613; --paper:#f6f1ea; --sand:#e9dfd2; --rose:#b98a6e; --gold:#a8794f;
+    --muted:#726a60; --line:rgba(26,22,19,.12); --card:#fffdfa;
+    --shadow:0 20px 54px -26px rgba(26,22,19,.5);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,"Times New Roman",serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .sans{font-family:"Helvetica Neue",Arial,sans-serif}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  a{color:inherit;text-decoration:none}
+  header.nav{position:sticky;top:0;z-index:20;background:rgba(246,241,234,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{font-size:1.15rem;letter-spacing:.24em;text-transform:uppercase}
+  .brand b{font-weight:600;color:var(--gold)}
+  .links{display:none;gap:34px}
+  .links a{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+  @media(min-width:820px){.links{display:flex}}
+  .book{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--ink);padding:11px 20px;border-radius:40px;transition:.2s}
+  .book:hover{background:var(--ink);color:var(--paper)}
+  /* HERO */
+  .hero{position:relative;min-height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;
+    background:linear-gradient(rgba(26,22,19,.46),rgba(26,22,19,.52)),
+      url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=60') center/cover;
+    color:#fff}
+  .hero .inner{padding:80px 20px;max-width:720px}
+  .hero .eyebrow{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.76rem;letter-spacing:.34em;text-transform:uppercase;margin-bottom:20px;opacity:.9}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:400;line-height:1.06;letter-spacing:-.01em}
+  .hero h1 em{font-style:italic;color:#f0d9c6}
+  .hero p{max-width:520px;margin:22px auto 32px;font-size:1.1rem;opacity:.92}
+  .btn{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;padding:15px 32px;border-radius:40px;display:inline-block;transition:.2s}
+  .btn-solid{background:#fff;color:var(--ink)}
+  .btn-solid:hover{background:var(--gold);color:#fff}
+  .btn-ghost{border:1px solid rgba(255,255,255,.7);color:#fff;margin-left:10px}
+  .btn-ghost:hover{background:#fff;color:var(--ink)}
+  /* STRIP */
+  .strip{background:var(--card);border-bottom:1px solid var(--line)}
+  .strip-in{display:flex;flex-wrap:wrap;justify-content:center;gap:22px 44px;padding:20px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  section{padding:80px 0}
+  .sec-head{text-align:center;margin-bottom:46px}
+  .sec-head .eyebrow{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .sec-head h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400}
+  /* GALLERY */
+  .gal{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  @media(min-width:760px){.gal{grid-template-columns:repeat(3,1fr)}}
+  .gal figure{position:relative;overflow:hidden;border-radius:12px;aspect-ratio:3/4;background:var(--sand)}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .gal figure:hover img{transform:scale(1.06)}
+  .gal figure.wide{grid-column:span 2;aspect-ratio:3/2}
+  @media(min-width:760px){.gal figure.wide{aspect-ratio:3/2}}
+  /* PACKAGES */
+  .pk{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:760px){.pk{grid-template-columns:repeat(3,1fr)}}
+  .pk .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 28px;box-shadow:var(--shadow);text-align:center;transition:.25s}
+  .pk .card:hover{transform:translateY(-6px)}
+  .pk .card .k{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .pk .card h3{font-size:1.5rem;font-weight:400;margin-bottom:6px}
+  .pk .card .p{font-size:2rem;color:var(--ink);margin-bottom:14px}
+  .pk .card .p span{font-size:.9rem;color:var(--muted)}
+  .pk .card ul{list-style:none;font-size:.94rem;color:var(--muted);line-height:2}
+  /* CTA BANNER */
+  .cta{background:var(--ink);color:var(--paper);border-radius:22px;text-align:center;padding:60px 26px;margin:20px 0}
+  .cta h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:400;margin-bottom:12px}
+  .cta h2 em{font-style:italic;color:var(--rose)}
+  .cta p{color:rgba(246,241,234,.72);max-width:460px;margin:0 auto 26px}
+  footer{border-top:1px solid var(--line);padding:50px 0 40px;text-align:center}
+  footer .note{font-family:"Helvetica Neue",Arial,sans-serif;font-size:.74rem;color:var(--muted);max-width:580px;margin:20px auto 0;line-height:1.75}
+  footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <div class="brand">Aperture&nbsp;<b>&&nbsp;Vow</b></div>
+    <nav class="links">
+      <a href="#work">Portfolio</a>
+      <a href="#packages">Packages</a>
+      <a href="#book">Booking</a>
+    </nav>
+    <a class="book" href="#book">Check your date</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="inner">
+    <div class="eyebrow">Wedding & couples photography · Dubai</div>
+    <h1>The day goes fast.<br/><em>The photographs stay.</em></h1>
+    <p>Unhurried, natural wedding photography for couples who want to remember how it felt — not just how it looked.</p>
+    <div>
+      <a class="btn btn-solid" href="#book">Check your date</a>
+      <a class="btn btn-ghost" href="#work">See the work</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip-in">
+    <span>200+ weddings</span>
+    <span>Full-day coverage</span>
+    <span>Private online galleries</span>
+    <span>Based in Dubai · travels UAE</span>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Selected work</div>
+      <h2>Moments, kept</h2>
+    </div>
+    <div class="gal">
+      <figure class="wide"><img loading="lazy" src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=55" alt="Couple at sunset"></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=55" alt="Bride portrait"></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=55" alt="Wedding rings and details"></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=800&q=55" alt="First dance"></figure>
+      <figure><img loading="lazy" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=55" alt="Reception celebration"></figure>
+      <figure class="wide"><img loading="lazy" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=55" alt="Couple walking"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="packages" style="background:var(--sand)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Collections</div>
+      <h2>Simple, honest packages</h2>
+    </div>
+    <div class="pk">
+      <div class="card">
+        <div class="k">Elopement</div>
+        <h3>The Vow</h3>
+        <div class="p">from AED 3,500</div>
+        <ul><li>4 hours coverage</li><li>1 photographer</li><li>120+ edited images</li><li>Private gallery</li></ul>
+      </div>
+      <div class="card">
+        <div class="k">Most booked</div>
+        <h3>The Day</h3>
+        <div class="p">from AED 6,900</div>
+        <ul><li>Full-day coverage</li><li>2 photographers</li><li>400+ edited images</li><li>Sneak peek in 48h</li></ul>
+      </div>
+      <div class="card">
+        <div class="k">Celebration</div>
+        <h3>The Story</h3>
+        <div class="p">from AED 11,000</div>
+        <ul><li>Two-day coverage</li><li>Album + prints</li><li>Engagement shoot</li><li>Highlight film</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Dates book <em>months</em> ahead.</h2>
+      <p>Tell me your date and venue — I'll confirm availability and send the full collection guide within a day.</p>
+      <a class="btn btn-solid" style="background:var(--rose)" href="#book">Check your date</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="color:var(--ink)">Aperture&nbsp;<b>&&nbsp;Vow</b></div>
+    <p class="note">
+      This is a <strong>free concept homepage</strong> designed by RedesignCo to show a direction — the studio name, prices and images are illustrative placeholders, not a real business.
+      If you'd like a site like this built for your photography, reach us at
+      <a href="mailto:adeline@agentmail.to">adeline@agentmail.to</a> or <a href="mailto:raydavisombeki@gmail.com">raydavisombeki@gmail.com</a>.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
