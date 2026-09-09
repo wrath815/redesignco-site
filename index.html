@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>RedesignCo — Websites that earn their keep</title>
+<title>RedesignCo: Websites that earn their keep</title>
 <meta name="description" content="RedesignCo rebuilds dated small-business websites into fast, clear, mobile-first pages that turn visitors into calls, bookings, and sales. Fixed-scope redesigns, no jargon." />
 <meta name="theme-color" content="#08080a" />
-<meta property="og:title" content="RedesignCo — Websites that earn their keep" />
+<meta property="og:title" content="RedesignCo: Websites that earn their keep" />
 <meta property="og:description" content="Fixed-scope redesigns that make dated small-business sites fast, clear, and mobile-first." />
 <meta property="og:type" content="website" />
 <!-- build-marker: kyra-cyberpunk-v5 -->
@@ -15,7 +15,7 @@
 <link rel="preload" as="image" href="assets/kyra-hero-905.webp" imagesrcset="assets/kyra-hero-600.webp 600w, assets/kyra-hero-905.webp 905w" imagesizes="(max-width: 767px) 100vw, 46vw" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2308080a'/%3E%3Cpath d='M9 22V10h6.2c2.7 0 4.4 1.5 4.4 3.9 0 1.8-1 3.1-2.6 3.6L20.8 22h-3l-2.4-4.2H12V22H9zm3-6.6h2.8c1.2 0 1.9-.6 1.9-1.6s-.7-1.6-1.9-1.6H12v3.2z' fill='%23e6b84e'/%3E%3C/svg%3E" />
 <style>
   :root{
@@ -25,9 +25,8 @@
     --gold:#e6b84e; --gold-bright:#f4d47f; --gold-deep:#c9902b; --red:#e23b2e; --red-soft:#ff5a49;
     --grad-gold:linear-gradient(120deg,#f4d47f 0%,#e6b84e 52%,#c9902b 100%);
     --shadow:0 30px 70px -34px rgba(0,0,0,.9);
-    --glow-gold:0 0 34px -6px rgba(230,184,78,.5);
     --serif:'Syne',system-ui,sans-serif;
-    --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --sans:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -57,12 +56,12 @@
   header.nav{position:sticky;top:0;z-index:50;background:rgba(10,10,12,.62);
     backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line-grey);
     transition:box-shadow .3s ease,background .3s ease}
-  header.nav.scrolled{box-shadow:0 14px 40px -30px rgba(230,184,78,.6);background:rgba(10,10,12,.82)}
+  header.nav.scrolled{box-shadow:0 14px 40px -30px rgba(0,0,0,.9);background:rgba(10,10,12,.82)}
   .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px}
   .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);
     font-weight:700;font-size:1.22rem;letter-spacing:-.02em;text-decoration:none}
   .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#1a1a1d,#0e0e10);
-    border:1px solid var(--line);box-shadow:var(--glow-gold);display:grid;place-items:center;flex:none}
+    border:1px solid var(--line);display:grid;place-items:center;flex:none}
   .nav-links{display:flex;gap:30px;align-items:center;font-size:.95rem;font-weight:500}
   .nav-links a{text-decoration:none;color:var(--text-soft);transition:color .2s}
   .nav-links a:hover{color:var(--text)}
@@ -72,14 +71,14 @@
   .nav-links a:not(.btn):hover::after{right:0}
   .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:.95rem;
     text-decoration:none;padding:12px 20px;border-radius:100px;transition:transform .18s,box-shadow .18s,filter .18s}
-  .btn-solid{background:var(--grad-gold);color:#14100a;box-shadow:0 12px 34px -12px rgba(230,184,78,.7)}
-  .btn-solid:hover{transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 18px 42px -12px rgba(230,184,78,.85)}
+  .btn-solid{background:var(--grad-gold);color:#14100a;box-shadow:0 10px 26px -18px rgba(0,0,0,.9)}
+  .btn-solid:hover{transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 16px 30px -18px rgba(0,0,0,.95)}
   .btn-ghost{border:1.5px solid rgba(230,184,78,.5);color:var(--text)}
-  .btn-ghost:hover{background:rgba(226,59,46,.1);border-color:var(--red);color:#fff;box-shadow:0 0 26px -8px rgba(226,59,46,.6)}
+  .btn-ghost:hover{background:rgba(226,59,46,.1);border-color:var(--red);color:#fff}
   .nav .btn{padding:10px 18px}
 
   /* HERO */
-  .hero{padding:74px 0 46px;position:relative;overflow:hidden}
+  .hero{padding:74px 24px 46px;position:relative;overflow:hidden}
   .hero-canvas{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease;
     background:
       radial-gradient(56% 58% at 72% 40%,rgba(230,184,78,.28),transparent 70%),
@@ -88,7 +87,7 @@
     mask-image:radial-gradient(130% 120% at 70% 40%,#000 34%,transparent 84%)}
   .hero-canvas.ready{opacity:1}
   .hero-canvas canvas{display:block;width:100%;height:100%}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:2}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:2;padding-inline:clamp(14px,2vw,28px)}
   .hero h1{font-size:clamp(2.7rem,5.6vw,4.6rem);font-weight:800}
   .hero h1 em{font-style:italic;font-weight:700;background:var(--grad-gold);-webkit-background-clip:text;
     background-clip:text;-webkit-text-fill-color:transparent}
@@ -99,17 +98,17 @@
   .hero-note svg{color:var(--gold)}
 
   /* BEFORE/AFTER SLIDER */
-  .compare{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow),0 0 0 1px var(--line),0 0 46px -10px rgba(230,184,78,.4);
+  .compare{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow),0 0 0 1px var(--line);
     aspect-ratio:4/3.05;background:#0b0b0d;user-select:none;touch-action:none}
   .compare .pane{position:absolute;inset:0}
   .compare .after{clip-path:inset(0 0 0 var(--pos,50%))}
   .compare svg{width:100%;height:100%}
   .divider{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:var(--gold);
-    box-shadow:0 0 14px 1px rgba(230,184,78,.85);transform:translateX(-1px);z-index:3;cursor:ew-resize}
+    transform:translateX(-1px);z-index:3;cursor:ew-resize}
   .knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44px;height:44px;
-    border-radius:50%;background:#0b0b0d;border:1.5px solid var(--gold);box-shadow:0 0 20px -2px rgba(230,184,78,.9);
+    border-radius:50%;background:#0b0b0d;border:1.5px solid var(--gold);box-shadow:0 10px 24px -14px rgba(0,0,0,.95);
     display:grid;place-items:center;color:var(--gold)}
-  .tag{position:absolute;top:14px;z-index:4;font-size:.68rem;font-weight:600;letter-spacing:.1em;
+  .tag{position:absolute;top:14px;z-index:4;font-size:.72rem;font-weight:600;letter-spacing:.1em;
     text-transform:uppercase;padding:6px 11px;border-radius:100px;color:#14100a;backdrop-filter:blur(4px)}
   .tag.b{left:14px;background:rgba(246,245,242,.86);color:#141417}
   .tag.a{right:14px;background:var(--grad-gold)}
@@ -117,7 +116,7 @@
 
   /* MARQUEE STRIP */
   .strip{border-block:1px solid var(--line-grey);background:rgba(22,22,25,.5)}
-  .strip-in{display:flex;flex-wrap:wrap;gap:14px 40px;padding:20px 0;align-items:center;
+  .strip-in{display:flex;flex-wrap:wrap;gap:14px 40px;padding:20px 14px;align-items:center;
     justify-content:space-between;font-family:var(--serif);font-size:1.02rem;color:var(--text-soft);font-weight:500}
   .strip-in b{color:var(--text);font-weight:700}
 
@@ -134,10 +133,10 @@
   .card::before{content:"";position:absolute;inset:0;border-radius:16px;padding:1px;
     background:var(--grad-gold);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
     -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .25s}
-  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow),0 0 40px -14px rgba(230,184,78,.5);border-color:transparent}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line)}
   .card:hover::before{opacity:.9}
-  .ico{width:50px;height:50px;border-radius:13px;background:rgba(230,184,78,.09);
-    border:1px solid var(--line);display:grid;place-items:center;color:var(--gold);margin-bottom:20px}
+  .ico{width:28px;height:28px;border-radius:0;background:none;
+    border:0;display:inline-flex;align-items:center;justify-content:flex-start;color:var(--gold);margin:0 0 12px}
   .card h3{font-size:1.34rem}
   .card p{color:var(--text-soft);margin:12px 0 16px;font-size:.98rem}
   .card ul{margin:0;padding:0;list-style:none;font-size:.9rem;color:var(--text-soft)}
@@ -146,7 +145,7 @@
 
   /* APPROACH */
   .approach{background:linear-gradient(150deg,rgba(29,29,33,.92),rgba(10,10,12,.94));color:var(--text);
-    border:1px solid var(--line);border-radius:26px;padding:64px clamp(28px,5vw,64px);position:relative;overflow:hidden;
+    border:1px solid var(--line);border-radius:26px;padding:64px 48px;position:relative;overflow:hidden;
     box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.05)}
   .approach::after{content:"";position:absolute;top:-40%;right:-10%;width:60%;height:160%;
     background:radial-gradient(closest-side,rgba(226,59,46,.14),transparent);pointer-events:none}
@@ -164,7 +163,7 @@
   .work{border:1px solid var(--line-grey);border-radius:16px;overflow:hidden;
     background:linear-gradient(160deg,rgba(29,29,33,.72),rgba(16,16,18,.72));
     transition:transform .2s,box-shadow .2s,border-color .2s}
-  .work:hover{transform:translateY(-4px);box-shadow:var(--shadow),0 0 40px -16px rgba(230,184,78,.5);border-color:var(--line)}
+  .work:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line)}
   .work .thumb{aspect-ratio:16/11;border-bottom:1px solid var(--line-grey);overflow:hidden}
   .work .thumb svg{width:100%;height:100%;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
   .work:hover .thumb svg{transform:scale(1.035)}
@@ -179,7 +178,7 @@
   .offer{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
   .offer .panel{background:linear-gradient(160deg,rgba(29,29,33,.75),rgba(16,16,18,.75));
     border:1px solid var(--line-grey);border-radius:18px;padding:34px 32px}
-  .offer .panel.lead{border-color:var(--line);box-shadow:0 0 44px -18px rgba(230,184,78,.55);
+  .offer .panel.lead{border-color:var(--line);
     background:linear-gradient(160deg,rgba(38,32,20,.7),rgba(18,16,12,.82))}
   .offer h3{font-size:1.5rem}
   .offer .price{font-family:var(--serif);font-size:1.05rem;color:var(--gold);font-weight:600;margin-top:6px}
@@ -229,7 +228,7 @@
   .px-content p{color:var(--text-soft);max-width:46ch;margin:16px auto 0;font-size:1.02rem}
 
   /* ===== PINNED / STICKY TRANSFORM SECTION ===== */
-  .pin{position:relative;height:280vh}
+  .pin{position:relative;height:280vh;padding-left:24px;padding-right:24px}
   .pin-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;place-items:center}
   .pin-art{position:absolute;top:50%;left:50%;width:130%;height:130%;transform:translate(-50%,-50%);
     background:url("assets/holo-terrain.svg") center/cover no-repeat;opacity:.28;will-change:transform,opacity;z-index:0}
@@ -243,30 +242,26 @@
   .pin-line{position:absolute;inset:0;display:grid;place-content:center;gap:14px;
     opacity:0;visibility:hidden;transform:translateY(22px) scale(.97);transition:none}
   .pin-line.on{opacity:1;visibility:visible;transform:none;
-    transition:opacity .55s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
-  .pin-line h2{font-size:clamp(2rem,4.6vw,3.4rem);max-width:18ch;margin-inline:auto}
+    transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+  .pin-line h2{font-size:clamp(2rem,4.6vw,3.4rem);max-width:18ch;margin-inline:auto;color:var(--text)}
   .pin-line h2 em{font-style:italic;background:var(--grad-gold);-webkit-background-clip:text;
     background-clip:text;-webkit-text-fill-color:transparent}
   .pin-line p{color:var(--text-soft);max-width:44ch;margin:0 auto;font-size:1.06rem}
   .pin-progress{position:relative;z-index:2;width:min(320px,60vw);height:3px;margin:36px auto 0;
     border-radius:3px;background:rgba(255,255,255,.1);overflow:hidden}
   .pin-bar{position:absolute;inset:0;transform-origin:left;transform:scaleX(0);
-    background:var(--grad-gold);box-shadow:0 0 14px -2px rgba(230,184,78,.8)}
+    background:var(--grad-gold)}
 
   /* ===== DRIFTING CONCEPT GALLERY ===== */
-  .gallery{position:relative;overflow:hidden;padding:6px 0;
-    -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
-    mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-  .gallery-track{display:flex;gap:22px;width:max-content;animation:drift 46s linear infinite}
-  .gallery:hover .gallery-track,.gallery:focus-within .gallery-track{animation-play-state:paused}
-  .g-card{flex:none;width:min(360px,74vw);border:1px solid var(--line-grey);border-radius:16px;overflow:hidden;
+  .gallery{position:relative;overflow-x:auto;padding:6px 4vw 18px;scroll-snap-type:x proximity;scrollbar-color:var(--gold-deep) transparent;scrollbar-width:thin}
+  .gallery-track{display:flex;gap:22px;width:max-content}
+  .g-card{flex:none;width:min(360px,74vw);scroll-snap-align:start;border:1px solid var(--line-grey);border-radius:16px;overflow:hidden;
     background:linear-gradient(160deg,rgba(29,29,33,.72),rgba(16,16,18,.72));transition:border-color .25s,box-shadow .25s}
-  .g-card:hover{border-color:var(--line);box-shadow:0 0 40px -16px rgba(230,184,78,.5)}
+  .g-card:hover{border-color:var(--line);box-shadow:var(--shadow)}
   .g-card img{width:100%;aspect-ratio:800/560;object-fit:cover;display:block;border-bottom:1px solid var(--line-grey)}
   .g-card .cap{padding:15px 18px}
-  .g-card .cap .k{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+  .g-card .cap .k{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
   .g-card .cap p{margin:7px 0 0;font-size:.9rem;color:var(--text-soft)}
-  @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   .svc .card:nth-child(2),.work-grid .work:nth-child(2),.steps .step:nth-child(2){transition-delay:.08s}
   .svc .card:nth-child(3),.work-grid .work:nth-child(3),.steps .step:nth-child(3){transition-delay:.16s}
   .svc .card:nth-child(4),.steps .step:nth-child(4){transition-delay:.24s}
@@ -276,7 +271,8 @@
     .svc,.work-grid,.steps{grid-template-columns:1fr}
     .steps{gap:26px}
     .nav-links a:not(.btn){display:none}
-    .hero{padding:48px 0 24px}
+    .hero{padding:48px 24px 24px}
+    .approach{padding:48px 28px}
     .sec{padding:64px 0}
   }
   @media(prefers-reduced-motion:reduce){
@@ -367,7 +363,7 @@
       <div class="sec-head reveal">
         <h2>A site that feels like the future, not 2011.</h2>
         <p>Depth, motion, and clarity working together, so the moment someone lands they trust you before they read a word.</p>
-        <p class="ownership">Fixed scope, fixed price. You own every file. No monthly lock-in.</p>
+        <p class="ownership">Fixed scope and a complete handoff. Every file stays with you after launch.</p>
       </div>
       <div>
         <div class="compare" id="compare" aria-label="Drag to compare a dated website with its redesign">
@@ -429,7 +425,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 7-5 5 5 5M15 7l5 5-5 5"/></svg>
           </div></div>
         </div>
-        <p class="compare-cap">Drag the handle — an illustrative before/after concept, not a real client site.</p>
+        <p class="compare-cap">Drag the handle: an illustrative before/after concept, not a real client site.</p>
       </div>
     </div>
   </section>
@@ -446,7 +442,7 @@
         <article class="card reveal">
           <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20M8 20v-4M16 20v-4"/></svg></div>
           <h3>Full site redesign</h3>
-          <p>A ground-up rebuild of your public pages — new layout, new copy, new mobile experience — that keeps what already works and fixes what doesn't.</p>
+          <p>A ground-up rebuild of your public pages with a new layout, clearer copy, and a mobile experience that keeps what works while fixing what doesn't.</p>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Clear structure &amp; navigation</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Rewritten, plain-English copy</li>
@@ -468,7 +464,7 @@
         <article class="card reveal">
           <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.4"/></svg></div>
           <h3>Landing pages that convert</h3>
-          <p>A focused page built around one job — a promotion, a service, a seasonal offer — with a single clear call to action and copy written to earn the click.</p>
+          <p>A focused page built around one clear job, such as a promotion, service, or seasonal offer. The copy and call to action stay focused on earning the click.</p>
           <ul>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> One goal, zero clutter</li>
             <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Forms &amp; booking that work</li>
@@ -506,23 +502,23 @@
           <div class="step">
             <div class="n">01</div>
             <h3>Audit</h3>
-            <p>A free, no-obligation walkthrough of your current site — what's working, what's leaking customers, and whether a redesign is even worth it.</p>
+            <p>A free, no-obligation walkthrough of your current site: what's working, what's leaking customers, and whether a redesign is even worth it.</p>
           </div>
           <div class="step">
             <div class="n">02</div>
             <h3>Concept</h3>
-            <p>One page: the scope, the price, and the timeline. No hourly meters, no vague retainers, no scope creep after we shake hands.</p>
+            <p>We set the scope, price, and timeline before work begins. There are no hourly meters, retainers, or surprise additions.</p>
           </div>
           <div class="step">
             <div class="n">03</div>
             <h3>Build</h3>
-            <p>You see a real, clickable draft early — not a slide deck. We refine in a couple of focused rounds instead of endless revisions.</p>
+            <p>You see a clickable draft early rather than a slide deck. Focused review rounds keep the work moving.</p>
           </div>
           <div class="step"><div class="n">04</div><h3>Polish</h3><p>Refine the motion, test the mobile layouts, and check accessibility before anything goes live.</p></div>
           <div class="step">
             <div class="n">05</div>
             <h3>Launch &amp; handoff</h3>
-            <p>We ship it, make sure it works on real phones, and hand you the files and logins. It's your website — you're never held hostage.</p>
+            <p>At launch, the files and logins are yours. We stay available for the handoff, then you run the site.</p>
           </div>
         </div>
       </div>
@@ -561,7 +557,7 @@
       <div class="sec-head reveal">
         <span class="eyebrow">Concept work</span>
         <h2>The kind of transformations we build.</h2>
-        <p style="color:var(--text-soft);margin-top:14px">RedesignCo is a new studio, so these are original concept pieces — sample rebuilds we designed to show our range and standard of work, not real client projects.</p>
+        <p style="color:var(--text-soft);margin-top:14px">RedesignCo is a new studio, so these are original concept pieces: sample rebuilds we designed to show our range and standard of work, not real client projects.</p>
       </div>
 
       <div class="work-grid sample-grid">
@@ -574,7 +570,7 @@
                 <button type="button" aria-pressed="false" data-option="1">For the table</button>
               </div>
               <div class="sample-selection" aria-live="polite"><strong>Fire-grilled plates</strong><p>Seasonal sides, slow-cooked favorites and something worth sharing.</p></div>
-              <small>Interactive concept preview. No booking or order is placed.</small>
+              <small>Interactive concept preview. Booking and ordering are disabled in this demonstration.</small>
             </div>
           </div>
           <div class="meta">
@@ -592,13 +588,13 @@
                 <button type="button" aria-pressed="false" data-option="1">Family care</button>
               </div>
               <div class="sample-selection" aria-live="polite"><strong>Your first visit, explained</strong><p>A simple guide to the consultation, your questions and what comes next.</p></div>
-              <small>Interactive concept preview. No booking or order is placed.</small>
+              <small>Interactive concept preview. Booking and ordering are disabled in this demonstration.</small>
             </div>
           </div>
           <div class="meta">
             <span class="k">Concept · Clinic</span>
             <h3>Northside Family Dental</h3>
-            <p>A dental practice concept built around one action — book an appointment — with insurance and hours answered before the patient has to ask.</p>
+            <p>A dental practice concept built around one action: book an appointment: with insurance and hours answered before the patient has to ask.</p>
           </div>
         </article>
         <article class="work sample-meridian reveal-scale" data-sample="meridian">
@@ -610,7 +606,7 @@
                 <button type="button" aria-pressed="false" data-option="1">Custom work</button>
               </div>
               <div class="sample-selection" aria-live="polite"><strong>Steel with a purpose</strong><p>Railings, stairs and structural details shaped around the space.</p></div>
-              <small>Interactive concept preview. No booking or order is placed.</small>
+              <small>Interactive concept preview. Booking and ordering are disabled in this demonstration.</small>
             </div>
           </div>
           <div class="meta">
@@ -669,7 +665,7 @@
   <section class="sec intelligence" id="intelligence">
     <div class="wrap intelligence-grid">
       <div class="reveal"><span class="eyebrow">AI-assisted. Human-directed.</span><h2>Meet the intelligence<br>behind the interface.</h2></div>
-      <div class="reveal"><p>Adeline is our fictional AI design host: a visual guide to a process that combines AI-assisted exploration with deliberate design decisions.</p><p>AI helps explore layouts, organize ideas and accelerate iterations. The real work is choosing what belongs, testing what works and refining the experience.</p><p class="intelligence-note">No pretend team member. No autonomous-service claims. Just a clearer way to show how we work.</p></div>
+      <div class="reveal"><p>Adeline is our fictional AI design host: a visual guide to a process that combines AI-assisted exploration with deliberate design decisions.</p><p>AI helps explore layouts, organize ideas and accelerate iterations. The real work is choosing what belongs, testing what works and refining the experience.</p><p class="intelligence-note">Adeline is not a team member or an autonomous service. She is a fictional guide to the AI-assisted process.</p></div>
     </div>
   </section>
 
@@ -681,8 +677,8 @@
           <img src="assets/kyra-portrait-480.webp" srcset="assets/kyra-portrait-240.webp 240w, assets/kyra-portrait-480.webp 480w" sizes="(max-width: 600px) 112px, 156px" width="480" height="540" loading="lazy" decoding="async" alt="Adeline, a fictional AI brand mascot with purple hair and glasses, touching her glasses in a city office" />
           <div><h3>Meet Adeline</h3><p>Your fictional AI design host. A face for our AI-assisted process, not a human employee.</p></div>
         </div>
-        <h2>Let's tear down your current site — free.</h2>
-        <p>Send the link to your existing website. You'll get a short, honest walkthrough of what's helping and what's hurting, plus a fixed quote if a redesign makes sense. No pressure, no retainer, no jargon.</p>
+        <h2>Let's tear down your current site for free.</h2>
+        <p>Send the link to your existing website. You'll get a short, honest walkthrough of what's helping and what's hurting, plus a fixed quote if a redesign makes sense. The first conversation is straightforward, with no pressure or retainer.</p>
         <div class="contact-cta">
           <a class="btn btn-solid" href="mailto:adeline@agentmail.to?subject=Free%20website%20teardown&amp;body=Here's%20my%20current%20site:%20">Request a review
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>

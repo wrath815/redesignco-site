@@ -1,6 +1,6 @@
 /* Adeline art direction: supplied raster artwork, swappable through assets/manifest.json.
    No CSS/SVG substitute scene. CSS light is atmospheric overlay only. */
-:root{--void:#08090d;--void-2:#11121a;--panel:#14151d;--text:#f6f5fb;--text-soft:#b8bac8;--text-dim:#9699ab;--gold:#aeeaf6;--gold-bright:#e5b9f8;--gold-deep:#c590ec;--red:#d693ee;--red-soft:#e5b9f8;--line:rgba(183,176,237,.22);--grad-gold:linear-gradient(110deg,#d3edf4,#dfb8ed);--glow-gold:0 0 20px -8px rgba(162,204,242,.35)}
+:root{--void:#08090d;--void-2:#11121a;--panel:#14151d;--text:#f6f5fb;--text-soft:#b8bac8;--text-dim:#9699ab;--gold:#aeeaf6;--gold-bright:#e5b9f8;--gold-deep:#c590ec;--red:#d693ee;--red-soft:#e5b9f8;--line:rgba(183,176,237,.22);--grad-gold:linear-gradient(110deg,#d3edf4,#dfb8ed)}
 body{background:linear-gradient(180deg,#08090d,#10111a 60%,#08090d)}
 body::before{opacity:.18}body::after{display:none}
 .hero{min-height:calc(100svh - 70px);background:#08090d;align-items:center}
@@ -16,15 +16,15 @@ body::before{opacity:.18}body::after{display:none}
 .hero .eyebrow{color:#aeeaf6}
 .hero-canvas{inset:15% 0 0 16%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 48%);mask-image:linear-gradient(90deg,transparent,#000 48%)}
 .hero-canvas.ready{opacity:.62}
-.btn-solid{box-shadow:0 10px 34px -20px rgba(210,163,246,.5);color:#131323}
-.btn-solid:hover{box-shadow:0 12px 38px -18px rgba(210,163,246,.7)}
+.btn-solid{box-shadow:0 10px 28px -20px rgba(0,0,0,.95);color:#131323}
+.btn-solid:hover{box-shadow:0 14px 32px -20px rgba(0,0,0,.98)}
 .btn-ghost{border-color:rgba(189,186,225,.48)}
 .btn-ghost:hover{background:rgba(170,124,215,.1);border-color:#dba9f0;box-shadow:none}
 .mark{border-color:rgba(191,193,232,.24)}.mark svg path{fill:#c8c4ef}
 header.nav{background:rgba(8,9,13,.88)}header.nav.scrolled{background:rgba(8,9,13,.94);box-shadow:none}
 .compare{box-shadow:0 25px 65px -35px #000,0 0 0 1px var(--line)}
 .card:hover,.work:hover{box-shadow:0 22px 60px -30px #000;border-color:var(--line)}
-.ico{background:rgba(186,168,222,.07)}
+.ico{background:none}
 .approach{background:linear-gradient(140deg,#161721,#0d0e15);border-color:var(--line)}
 .approach::after{background:radial-gradient(closest-side,rgba(142,95,177,.08),transparent)}
 .steps{grid-template-columns:repeat(5,1fr)}.step{border-color:rgba(188,163,218,.3)}
@@ -49,19 +49,17 @@ header.nav{background:rgba(8,9,13,.88)}header.nav.scrolled{background:rgba(8,9,1
 .hero-kyra-wrap::before{content:"";position:absolute;right:-4%;top:14%;width:62%;height:78%;z-index:-1;border-radius:50%;
  background:radial-gradient(closest-side,rgba(229,185,248,.5),rgba(174,234,246,.16) 60%,transparent 72%);opacity:.34;filter:blur(26px);pointer-events:none}
 /* glasses glint sweep across the upper-right where Adeline's face sits */
-.hero-kyra-wrap::after{content:"";position:absolute;right:14%;top:20%;width:34%;height:9%;z-index:1;pointer-events:none;
- background:linear-gradient(100deg,transparent,rgba(255,255,255,.85),transparent);opacity:0;transform:translateX(-120%) rotate(8deg);mix-blend-mode:screen}
+.hero-kyra-wrap::after{opacity:0;transform:translateX(-120%) rotate(8deg);mix-blend-mode:screen}
 @media(prefers-reduced-motion:no-preference){
  .hero-kyra{animation:kyra-breathe 7.5s ease-in-out infinite}
  .hero-kyra-wrap::before{animation:kyra-rim 6s ease-in-out infinite}
- .hero-kyra-wrap::after{animation:kyra-glint 9s ease-in-out infinite 2s}
  /* light-sweep on hover across the whole hero */
  .hero:hover::before{animation:office-reflection 1.4s ease-out}
 }
 @keyframes office-reflection{0%{opacity:0;transform:translateX(-40%)}30%{opacity:.9}100%{opacity:0;transform:translateX(120%)}}
 @media(max-width:1100px){.hero h1{font-size:3.25rem}.hero-grid>div{max-width:570px}.steps{grid-template-columns:repeat(3,1fr);gap:28px}.hero-kyra-wrap{width:56%}}
 @media(max-width:767px){
- .hero{min-height:calc(100svh - 70px);align-items:flex-end;padding:36px 0 30px}
+ .hero{min-height:calc(100svh - 70px);align-items:flex-end;padding:36px 16px 30px}
  .hero-bg img{object-position:center 40%}
  .hero-kyra-wrap{width:100%;-webkit-mask-image:linear-gradient(0deg,transparent 8%,rgba(0,0,0,.5) 34%,#000 62%);mask-image:linear-gradient(0deg,transparent 8%,rgba(0,0,0,.5) 34%,#000 62%);-webkit-mask-composite:source-over;mask-composite:add}
  .hero-kyra{left:50%;right:auto;transform:translateX(-50%);object-position:52% 4%;animation:none}
@@ -70,7 +68,7 @@ header.nav{background:rgba(8,9,13,.88)}header.nav.scrolled{background:rgba(8,9,1
  .hero::after{background:linear-gradient(0deg,#08090d 3%,rgba(8,9,13,.96) 23%,rgba(8,9,13,.64) 42%,transparent 69%)}
  .hero::before{display:none}.hero h1{font-size:clamp(2.4rem,7.8vw,3.2rem);line-height:1.12;letter-spacing:-.04em;margin-top:12px}
  .hero .lead{font-size:.9rem;max-width:36ch;margin:15px 0 20px}.hero-canvas{inset:0;opacity:.45!important;-webkit-mask-image:linear-gradient(0deg,transparent 20%,#000 70%);mask-image:linear-gradient(0deg,transparent 20%,#000 70%)}
- .hero .eyebrow{font-size:.62rem}.hero-cta .btn{font-size:.77rem;padding:12px 13px}
+ .hero .eyebrow{font-size:.75rem}.hero-cta .btn{font-size:.82rem;padding:12px 13px}
  .steps{grid-template-columns:1fr;gap:26px}.extended-services{grid-template-columns:1fr;gap:12px}
  .pin-art{left:30%;width:65%;height:110%}.pin-sticky::after{background:linear-gradient(0deg,#08090d 10%,rgba(8,9,13,.87) 44%,rgba(8,9,13,.15) 85%)}.pin-lines{width:100%}
  .intelligence-grid{grid-template-columns:1fr;gap:28px;padding-top:36px}.intelligence h2 br{display:none}
