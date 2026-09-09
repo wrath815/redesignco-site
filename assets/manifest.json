@@ -1,14 +1,14 @@
 {
-  "note": "Kyra is a fictional AI brand mascot. Swap hero pose by changing hero.src / hero.srcset here and the matching <img class=\"hero-kyra\"> in index.html.",
+  "note": "Adeline is a fictional AI brand mascot. Swap the hero image by changing hero.src / hero.srcset here and the matching <img class=\"hero-kyra\"> in index.html.",
   "hero": {
-    "src": "assets/kyra-hero-905.webp",
-    "srcset": "assets/kyra-hero-600.webp 600w, assets/kyra-hero-905.webp 905w",
+    "src": "assets/adeline-480.webp",
+    "srcset": "assets/adeline-240.webp 240w, assets/adeline-480.webp 480w",
     "sizes": "(max-width: 767px) 100vw, 46vw",
-    "alt": "Kyra, a fictional AI brand mascot with purple hair and glasses, standing in a neon-lit executive office"
+    "alt": "Adeline, a fictional AI brand mascot with purple hair and glasses, standing in a neon-lit executive office"
   },
   "hero_background": {
-    "webp": "assets/kyra-office-neon-1600.webp",
-    "fallback": "assets/kyra-office-neon.png"
+    "webp": "assets/city-960.webp",
+    "fallback": "assets/city-960.webp"
   },
   "portrait": {
     "src": "assets/kyra-portrait-480.webp",
