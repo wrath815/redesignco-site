@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found - RedesignCo</title>
+<meta name="robots" content="noindex,follow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="theme-color" content="#080808">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink:#080808; --paper:#fbfaf6; --accent:#f06c3f; --muted:rgba(251,250,246,.62); --mono:"JetBrains Mono","SF Mono",Consolas,monospace; --display:"Arial Black","Helvetica Neue",Arial,sans-serif; --serif:Charter,"Iowan Old Style",Georgia,serif; }
+  html, body { min-height: 100%; background: var(--ink); color: var(--paper); }
+  body { font-family: var(--serif); display: grid; place-items: center; padding: 24px; overflow: hidden; }
+  body::before { content:""; position: fixed; inset: -20%; background: radial-gradient(circle at 25% 30%, rgba(240,108,63,.28), transparent 26%), radial-gradient(circle at 80% 72%, rgba(251,250,246,.08), transparent 24%); animation: drift 14s ease-in-out infinite alternate; }
+  main { position: relative; z-index: 1; width: min(980px, 100%); border: 1px solid rgba(251,250,246,.18); padding: clamp(28px, 7vw, 70px); background: rgba(8,8,8,.66); backdrop-filter: blur(16px); }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--paper); text-decoration: none; font-family: var(--serif); font-size: 20px; font-weight: 800; letter-spacing: -.04em; margin-bottom: clamp(44px, 7vw, 86px); }
+  .brand img { width: 31px; height: 31px; border: 1px solid rgba(251,250,246,.45); background: rgba(251,250,246,.94); }
+  .dot { color: var(--accent); }
+  .label { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  h1 { font-family: var(--display); font-size: clamp(54px, 13vw, 146px); line-height: .82; letter-spacing: -.075em; text-wrap: balance; }
+  p { margin-top: 26px; max-width: 58ch; color: rgba(251,250,246,.76); font-size: clamp(18px, 2vw, 22px); line-height: 1.55; text-wrap: pretty; }
+  .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+  a.button { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; padding: 0 22px; border: 1px solid var(--paper); background: var(--paper); color: var(--ink); font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; }
+  a.button.secondary { background: transparent; color: var(--paper); border-color: rgba(251,250,246,.28); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  @keyframes drift { from { transform: translate3d(-1%, -1%, 0) scale(1); } to { transform: translate3d(1%, 1%, 0) scale(1.08); } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  @media (max-width: 560px) { main { padding: 26px; } .actions a { width: 100%; } }
+</style>
+</head>
+<body>
+<main>
+  <a class="brand" href="review.html" aria-label="RedesignCo home"><img src="assets/redesignco-mark.svg" alt="" aria-hidden="true"><span>RedesignCo<span class="dot">.</span></span></a>
+  <div class="label">404 / broken path</div>
+  <h1>This page missed the conversion path.</h1>
+  <p>The page you wanted is not here. The useful path is still alive: request a website review, or head back to the RedesignCo landing page.</p>
+  <div class="actions">
+    <a class="button" href="review.html#reviewForm">Request my review</a>
+    <a class="button secondary" href="review.html">Back to home</a>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">RedesignCo mark</title>
+  <desc id="desc">A minimalist geometric R inside a square frame with a burnt-orange dot.</desc>
+  <rect x="6" y="6" width="52" height="52" fill="#fafaf7" stroke="#0a0a0c" stroke-width="4"/>
+  <path d="M22 46V18h15c7 0 11 4 11 10s-4 10-11 10H22m15 0 12 8" fill="none" stroke="#0a0a0c" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter"/>
+  <circle cx="50" cy="14" r="4" fill="#c8462c"/>
+</svg>
